@@ -14,8 +14,6 @@ public class ControladorSelTipoCtrl {
     public ControladorSelTipoCtrl(Animal animalSel) {
         vistaSelTipoCtrl = new frmSelTipoCtrl();
         this.animalSel = animalSel;
-        //System.out.println(animalSel.getNombre());
-
     }
 
     public void run() {

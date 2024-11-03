@@ -46,7 +46,7 @@ public class Veterinario {
     }
 
     public Object[] obtenerDatosTabla() {
-        return new Object[] {
+        return new Object[]{
             id,
             nombres,
             dni,
