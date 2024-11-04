@@ -23,7 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="PnlTitulo" max="32767" attributes="0"/>
+          <Component id="PnlTitulo" pref="1000" max="32767" attributes="0"/>
           <Component id="PnlVerCtrlMedico" alignment="0" max="32767" attributes="0"/>
           <Component id="PnlInputs" alignment="0" max="32767" attributes="0"/>
       </Group>
@@ -53,7 +53,7 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Arial Rounded MT Bold" size="48" style="0"/>
+              <Font name="Arial Rounded MT Bold" size="48" style="1"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Gesti&#xf3;n de controles de operaciones"/>

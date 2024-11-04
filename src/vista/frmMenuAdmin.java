@@ -70,16 +70,16 @@ public class frmMenuAdmin extends javax.swing.JFrame {
         PnlSaludoLayout.setHorizontalGroup(
             PnlSaludoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlSaludoLayout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(16, 16, 16)
                 .addComponent(LblSaludo, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PnlSaludoLayout.setVerticalGroup(
             PnlSaludoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlSaludoLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addContainerGap()
                 .addComponent(LblSaludo, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         PnlInputs.setLayout(new java.awt.GridLayout(3, 1));
@@ -87,6 +87,7 @@ public class frmMenuAdmin extends javax.swing.JFrame {
         PnlRegistrar.setBackground(new Color(204, 255, 204));
         PnlRegistrar.setLayout(new java.awt.GridBagLayout());
 
+        BtnRegVet.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         BtnRegVet.setText("Registrar veterinario");
         BtnRegVet.setPreferredSize(new java.awt.Dimension(700, 80));
         BtnRegVet.addActionListener(new java.awt.event.ActionListener() {
@@ -101,6 +102,7 @@ public class frmMenuAdmin extends javax.swing.JFrame {
         PnlGestionar.setBackground(new Color(204, 255, 204));
         PnlGestionar.setLayout(new java.awt.GridBagLayout());
 
+        BtnGesVet.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         BtnGesVet.setText("Gestionar veterinarios");
         BtnGesVet.setPreferredSize(new java.awt.Dimension(700, 80));
         PnlGestionar.add(BtnGesVet, new java.awt.GridBagConstraints());
@@ -110,6 +112,7 @@ public class frmMenuAdmin extends javax.swing.JFrame {
         PnlVerHistorias.setBackground(new Color(204, 255, 204));
         PnlVerHistorias.setLayout(new java.awt.GridBagLayout());
 
+        BtnVerHist.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         BtnVerHist.setText("Ver historias médicas");
         BtnVerHist.setPreferredSize(new java.awt.Dimension(700, 80));
         PnlVerHistorias.add(BtnVerHist, new java.awt.GridBagConstraints());

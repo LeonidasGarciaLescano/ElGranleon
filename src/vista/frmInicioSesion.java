@@ -75,38 +75,53 @@ public class frmInicioSesion extends javax.swing.JFrame {
         PnlInputs.setLayout(new java.awt.GridLayout(3, 1));
 
         PnlId.setBackground(new Color(204,255,204));
-        PnlId.setLayout(new java.awt.GridBagLayout());
+        PnlId.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TxtId.setPreferredSize(new java.awt.Dimension(200, 35));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 7;
-        PnlId.add(TxtId, gridBagConstraints);
+        PnlId.add(TxtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 50, 300, -1));
 
-        jLabel2.setText("Identificación del zoológico");
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jLabel2.setText("Identificación del zoológico:");
         jLabel2.setPreferredSize(new java.awt.Dimension(200, 25));
-        PnlId.add(jLabel2, new java.awt.GridBagConstraints());
+        PnlId.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 300, -1));
 
         PnlInputs.add(PnlId);
 
         PnlClave.setBackground(new Color(204,255,204));
-        PnlClave.setLayout(new java.awt.GridBagLayout());
 
         TxtClave.setPreferredSize(new java.awt.Dimension(200, 35));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        PnlClave.add(TxtClave, gridBagConstraints);
 
+        jLabel1.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jLabel1.setText("Contraseña:");
         jLabel1.setPreferredSize(new java.awt.Dimension(200, 25));
-        PnlClave.add(jLabel1, new java.awt.GridBagConstraints());
+
+        javax.swing.GroupLayout PnlClaveLayout = new javax.swing.GroupLayout(PnlClave);
+        PnlClave.setLayout(PnlClaveLayout);
+        PnlClaveLayout.setHorizontalGroup(
+            PnlClaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PnlClaveLayout.createSequentialGroup()
+                .addGap(349, 349, 349)
+                .addGroup(PnlClaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TxtClave, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(351, 351, 351))
+        );
+        PnlClaveLayout.setVerticalGroup(
+            PnlClaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PnlClaveLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TxtClave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
         PnlInputs.add(PnlClave);
 
         PnlIngresar.setBackground(new Color(204,255,204));
         PnlIngresar.setLayout(new java.awt.GridBagLayout());
 
+        BtnIngresar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         BtnIngresar.setText("Ingresar");
         BtnIngresar.setPreferredSize(new java.awt.Dimension(200, 50));
         BtnIngresar.addActionListener(new java.awt.event.ActionListener() {
@@ -125,7 +140,7 @@ public class frmInicioSesion extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PnlTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
+            .addComponent(PnlTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(PnlLogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(PnlInputs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );

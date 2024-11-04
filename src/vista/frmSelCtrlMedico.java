@@ -4,23 +4,17 @@
  */
 package vista;
 
-import java.awt.Color;
-
 /**
  *
  * @author USUARIO
  */
-public class frmSelAnimal extends javax.swing.JFrame {
+public class frmSelCtrlMedico extends javax.swing.JFrame {
 
     /**
-     * Creates new form frmSelAnimal
+     * Creates new form frmVertCtrlOperaciones
      */
-    public frmSelAnimal() {
+    public frmSelCtrlMedico() {
         initComponents();
-        getContentPane().setBackground(new Color(204, 255, 204));
-        this.setLocationRelativeTo(null);
-        setResizable(false);
-        setSize(1000, 620);
     }
 
     /**
@@ -34,62 +28,63 @@ public class frmSelAnimal extends javax.swing.JFrame {
 
         PnlTitulo = new javax.swing.JPanel();
         LblTitulo = new javax.swing.JLabel();
-        PnlArea = new javax.swing.JPanel();
-        LblArea = new javax.swing.JLabel();
-        CmbArea = new javax.swing.JComboBox<>();
+        PnlBusqueda = new javax.swing.JPanel();
+        LblBuscarID = new javax.swing.JLabel();
+        TxtBuscarID = new javax.swing.JTextField();
         PnlTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        TblAnimales = new javax.swing.JTable();
+        TblControlMedicos = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
-        LblTitulo.setText("Animales del zoológico");
+        LblTitulo.setText("Controles medicos registrados");
 
         javax.swing.GroupLayout PnlTituloLayout = new javax.swing.GroupLayout(PnlTitulo);
         PnlTitulo.setLayout(PnlTituloLayout);
         PnlTituloLayout.setHorizontalGroup(
             PnlTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlTituloLayout.createSequentialGroup()
-                .addGap(200, 200, 200)
+                .addGap(111, 111, 111)
                 .addComponent(LblTitulo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PnlTituloLayout.setVerticalGroup(
             PnlTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlTituloLayout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
-                .addComponent(LblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
+            .addGroup(PnlTituloLayout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(LblTitulo)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        LblArea.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
-        LblArea.setText("Area:");
+        LblBuscarID.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        LblBuscarID.setText("Buscar por ID:");
 
-        CmbArea.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        javax.swing.GroupLayout PnlAreaLayout = new javax.swing.GroupLayout(PnlArea);
-        PnlArea.setLayout(PnlAreaLayout);
-        PnlAreaLayout.setHorizontalGroup(
-            PnlAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlAreaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(LblArea)
-                .addGap(18, 18, 18)
-                .addComponent(CmbArea, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+        javax.swing.GroupLayout PnlBusquedaLayout = new javax.swing.GroupLayout(PnlBusqueda);
+        PnlBusqueda.setLayout(PnlBusquedaLayout);
+        PnlBusquedaLayout.setHorizontalGroup(
+            PnlBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PnlBusquedaLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(LblBuscarID)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(TxtBuscarID, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        PnlAreaLayout.setVerticalGroup(
-            PnlAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PnlAreaLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(PnlAreaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(CmbArea, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LblArea))
-                .addContainerGap(28, Short.MAX_VALUE))
+        PnlBusquedaLayout.setVerticalGroup(
+            PnlBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PnlBusquedaLayout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(PnlBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PnlBusquedaLayout.createSequentialGroup()
+                        .addComponent(LblBuscarID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(27, Short.MAX_VALUE))
+                    .addGroup(PnlBusquedaLayout.createSequentialGroup()
+                        .addComponent(TxtBuscarID, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        TblAnimales.setModel(new javax.swing.table.DefaultTableModel(
+        TblControlMedicos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -100,23 +95,22 @@ public class frmSelAnimal extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(TblAnimales);
+        jScrollPane1.setViewportView(TblControlMedicos);
 
         javax.swing.GroupLayout PnlTablaLayout = new javax.swing.GroupLayout(PnlTabla);
         PnlTabla.setLayout(PnlTablaLayout);
         PnlTablaLayout.setHorizontalGroup(
             PnlTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlTablaLayout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 952, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 965, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         PnlTablaLayout.setVerticalGroup(
             PnlTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlTablaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 405, Short.MAX_VALUE)
-                .addGap(17, 17, 17))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 375, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -124,7 +118,7 @@ public class frmSelAnimal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PnlTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(PnlArea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PnlBusqueda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(PnlTabla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -132,7 +126,7 @@ public class frmSelAnimal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(PnlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PnlArea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PnlBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PnlTabla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -157,32 +151,39 @@ public class frmSelAnimal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frmSelAnimal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmSelCtrlMedico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frmSelAnimal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmSelCtrlMedico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frmSelAnimal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmSelCtrlMedico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frmSelAnimal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(frmSelCtrlMedico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new frmSelAnimal().setVisible(true);
+                new frmSelCtrlMedico().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> CmbArea;
-    private javax.swing.JLabel LblArea;
+    private javax.swing.JLabel LblBuscarID;
     private javax.swing.JLabel LblTitulo;
-    private javax.swing.JPanel PnlArea;
+    private javax.swing.JPanel PnlBusqueda;
     private javax.swing.JPanel PnlTabla;
     private javax.swing.JPanel PnlTitulo;
-    public javax.swing.JTable TblAnimales;
+    private javax.swing.JTable TblControlMedicos;
+    private javax.swing.JTextField TxtBuscarID;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
