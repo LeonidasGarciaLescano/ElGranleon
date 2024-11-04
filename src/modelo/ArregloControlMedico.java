@@ -13,7 +13,7 @@ import java.util.Date;
 public class ArregloControlMedico {
 
     private int indice;
-    private ControlMedico[] controlesMedicos;
+    private final ControlMedico[] controlesMedicos;
 
     public ArregloControlMedico() {
         this.indice = 0;
@@ -21,8 +21,16 @@ public class ArregloControlMedico {
     }
 
     public void registrarControlMedico(Object[] datosCtrlMedico,
+            Object[] datosInformeMedico,
             Object[] datosDiagnostico,
             Object[] datosExamenFisico, Object[][] datosSintomas, Object[][] datosMedicamentos) throws IdDuplicado, LimiteAlcanzado {
+
+        double peso, altura;
+        String observaciones;
+
+        peso = (double) datosInformeMedico[0];
+        altura = (double) datosInformeMedico[1];
+        observaciones = (String) datosInformeMedico[2];
 
         String id, idAnimal, idVeterinario;
         Date fechaRegistro, fechaUltimaMod;
@@ -42,6 +50,7 @@ public class ArregloControlMedico {
         if (this.indice < this.controlesMedicos.length) {
             this.controlesMedicos[this.indice] = new ControlMedico(id, idAnimal, idVeterinario, fechaRegistro, fechaUltimaMod);
             controlesMedicos[this.indice].registrarDiagnostico(datosDiagnostico, datosExamenFisico, datosSintomas, datosMedicamentos);
+            controlesMedicos[this.indice].registrarInformeMedico(peso, altura, observaciones);
             this.indice++;
         } else {
             throw new LimiteAlcanzado();

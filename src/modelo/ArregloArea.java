@@ -13,7 +13,7 @@ import java.util.Date;
 public class ArregloArea {
 
     private int indice;
-    private Area[] areas;
+    private final Area[] areas;
 
     public ArregloArea() {
         this.indice = 0;

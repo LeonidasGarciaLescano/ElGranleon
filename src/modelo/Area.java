@@ -11,7 +11,7 @@ import java.util.Date;
  */
 public class Area {
 
-    private String nombreArea;
+    private final String nombreArea;
     ArregloAnimal animales;
     ArregloVeterinario veterinarios;
 
@@ -31,7 +31,7 @@ public class Area {
         } catch (IdDuplicado | LimiteAlcanzado e) {
             resultado = e.getMessage();
         }
-        
+
         return resultado;
     }
 
@@ -64,7 +64,7 @@ public class Area {
         return resultado;
 
     }
-    
+
     public String registrarVeterinarioCirujano(String id, String clave, String nombres, String telefono, String email, String dni, Date fechaRegistro) {
 
         String resultado;
@@ -79,7 +79,7 @@ public class Area {
         return resultado;
 
     }
-    
+
     public String eliminarAnimal(String id) {
 
         String resultado;
@@ -126,6 +126,18 @@ public class Area {
 
     }
 
+    public Veterinario buscarVeterinario(String id) {
+
+        try {
+
+            return veterinarios.buscarVeterinario(id);
+
+        } catch (ArregloVacio | ElementoNoEncontrado e) {
+            return null;
+        }
+
+    }
+
     @Override
     public String toString() {
         String nombres = "";
@@ -153,7 +165,5 @@ public class Area {
     public ArregloVeterinario getArregloVeterinarios() {
         return veterinarios;
     }
-    
-    
 
 }

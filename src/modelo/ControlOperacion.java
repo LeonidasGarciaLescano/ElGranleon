@@ -10,11 +10,11 @@ public class ControlOperacion {
     private String id, nombreOperacion, resultado, descripcion, anotaciones, nombreVeterinario;
     private Date fechaOperacion, fechaRegistro, fechaUltimaMod;
 
-    public ControlOperacion(String id, 
-            String nombreOperacion, 
-            String resultado, 
-            String descripcion, 
-            String anotaciones, 
+    public ControlOperacion(String id,
+            String nombreOperacion,
+            String resultado,
+            String descripcion,
+            String anotaciones,
             String nombreVeterinario, Date fechaOperacion, Date fechaRegistro, Date fechaUltimaMod) {
         this.id = id;
         this.nombreOperacion = nombreOperacion;

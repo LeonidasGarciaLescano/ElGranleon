@@ -11,10 +11,6 @@ public class ExamenFisico {
     private double temperaturaCorporal;
     private int frecuenciaCardiaca;
     private Date fechaExamen;
-
-    public ExamenFisico() {
-        
-    }
     
     public ExamenFisico(String estado, double temperaturaCorporal, int frecuenciaCardiaca, Date fechaExamen) {
         this.estado = estado;

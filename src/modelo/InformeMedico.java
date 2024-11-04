@@ -14,4 +14,16 @@ public class InformeMedico {
         this.observaciones = observaciones;
     }
 
+    public double getPeso() {
+        return peso;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public String getObservaciones() {
+        return observaciones;
+    }
+
 }

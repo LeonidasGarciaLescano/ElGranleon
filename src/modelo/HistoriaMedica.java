@@ -22,12 +22,12 @@ public class HistoriaMedica {
         this.controlesOperaciones = new ArregloControlOperacion();
     }
 
-    public String agregarControlMedico(Object[] datosCtrlMedico, Object[] datosDiagnostico, Object[] datosExamenFisico, Object[][] datosSintomas, Object[][] datosMedicamentos) {
+    public String agregarControlMedico(Object[] datosCtrlMedico, Object[] datosInformeMedico, Object[] datosDiagnostico, Object[] datosExamenFisico, Object[][] datosSintomas, Object[][] datosMedicamentos) {
 
         String resultado;
 
         try {
-            controlesMedicos.registrarControlMedico(datosCtrlMedico, datosDiagnostico, datosExamenFisico, datosSintomas, datosMedicamentos);
+            controlesMedicos.registrarControlMedico(datosCtrlMedico, datosInformeMedico, datosDiagnostico, datosExamenFisico, datosSintomas, datosMedicamentos);
             resultado = "Control medico registrado con exito";
         } catch (IdDuplicado | LimiteAlcanzado e) {
             resultado = e.getMessage();
@@ -58,6 +58,26 @@ public class HistoriaMedica {
 
         return result;
 
+    }
+
+    public String getNombreAnimal() {
+        return nombreAnimal;
+    }
+
+    public String getEspecie() {
+        return especie;
+    }
+
+    public Date getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public ArregloControlMedico getControlesMedicos() {
+        return controlesMedicos;
+    }
+
+    public ArregloControlOperacion getControlesOperaciones() {
+        return controlesOperaciones;
     }
 
 }

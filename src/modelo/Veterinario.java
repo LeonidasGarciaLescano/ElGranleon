@@ -22,7 +22,7 @@ public class Veterinario {
         this.nombreArea = nombreArea;
         this.tipo = tipo;
     }
-    
+
     public Veterinario(String id, String clave, String nombres, String telefono, String email, String dni, Date fechaRegistro, String nombreArea) {
         this.id = id;
         this.clave = clave;
@@ -54,7 +54,7 @@ public class Veterinario {
             tipo
         };
     }
-    
+
     public String getId() {
         return id;
     }
@@ -82,7 +82,5 @@ public class Veterinario {
     public String getTipo() {
         return tipo;
     }
-    
-    
 
 }

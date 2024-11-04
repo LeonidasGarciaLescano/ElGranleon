@@ -5,7 +5,6 @@ import excepciones.ElementoNoEncontrado;
 import excepciones.IdDuplicado;
 import excepciones.LimiteAlcanzado;
 import general.Eliminadores;
-import java.util.Date;
 
 /**
  * @author Leonidas Garcia Lescano
@@ -13,7 +12,7 @@ import java.util.Date;
 public class ArregloSintoma {
 
     private int indice;
-    private Sintoma[] sintomas;
+    private final Sintoma[] sintomas;
 
     public ArregloSintoma() {
         this.indice = 0;

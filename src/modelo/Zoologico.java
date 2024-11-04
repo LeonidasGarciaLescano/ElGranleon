@@ -5,10 +5,6 @@ import excepciones.ElementoNoEncontrado;
 import excepciones.IdDuplicado;
 import excepciones.LimiteAlcanzado;
 import java.util.Date;
-import modelo.Area;
-import modelo.ArregloAnimal;
-import modelo.ArregloArea;
-import modelo.ArregloVeterinario;
 
 /**
  * @author Leonidas Garcia Lescano
@@ -44,7 +40,7 @@ public class Zoologico {
         return resultado;
     }
 
-    public String eliminarAnimal(String nombreArea) {
+    public String eliminarArea(String nombreArea) {
 
         String resultado;
 
@@ -61,7 +57,7 @@ public class Zoologico {
 
     }
 
-    public Area buscarAnimal(String nombreArea) {
+    public Area buscarArea(String nombreArea) {
 
         try {
 

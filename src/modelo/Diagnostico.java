@@ -25,7 +25,7 @@ public class Diagnostico {
     }
 
     public void registrarExamenFisico(String estado, double temperaturaCorporal, int frecuenciaCardiaca, Date fechaExamen) {
-        
+        examenFisico = new ExamenFisico(estado, temperaturaCorporal, frecuenciaCardiaca, fechaExamen);
     }
 
     public String registrarSintoma(String sintoma, String gravedad) {
@@ -114,6 +114,26 @@ public class Diagnostico {
             return null;
         }
 
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public String getResultado() {
+        return resultado;
+    }
+
+    public ExamenFisico getExamenFisico() {
+        return examenFisico;
+    }
+
+    public ArregloSintoma getSintomas() {
+        return sintomas;
+    }
+
+    public ArregloMedicamento getMedicamentos() {
+        return medicamentos;
     }
 
 }

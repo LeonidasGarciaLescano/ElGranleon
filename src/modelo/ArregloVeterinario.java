@@ -13,14 +13,17 @@ import java.util.Date;
 public class ArregloVeterinario {
 
     private int indice;
-    private Veterinario[] veterinarios;
+    private final Veterinario[] veterinarios;
 
     public ArregloVeterinario(int tam) {
         this.indice = 0;
         veterinarios = new Veterinario[tam];
     }
 
-    public void registrarVeterinario(String id, String clave, String nombres, String telefono, String email, String dni, Date fechaRegistro, String nombreArea) throws IdDuplicado, LimiteAlcanzado {
+    public void registrarVeterinario(String id,
+            String clave,
+            String nombres,
+            String telefono, String email, String dni, Date fechaRegistro, String nombreArea) throws IdDuplicado, LimiteAlcanzado {
 
         for (int i = 0; i < this.indice; i++) {
             if (id.equals(veterinarios[i].getId())) {
@@ -53,7 +56,7 @@ public class ArregloVeterinario {
         }
 
     }
-    
+
     public void registrarVeterinarioZoologico(String id, String clave, String nombres, String telefono, String email, String dni, Date fechaRegistro, String nombreArea, String tipo) throws IdDuplicado, LimiteAlcanzado {
 
         for (int i = 0; i < this.indice; i++) {
@@ -87,7 +90,7 @@ public class ArregloVeterinario {
         }
 
     }
-    
+
     public void registrarVeterinarioCirujano(String id, String clave, String nombres, String telefono, String email, String dni, Date fechaRegistro, String nombreArea, String tipo) throws IdDuplicado, LimiteAlcanzado {
 
         for (int i = 0; i < this.indice; i++) {
@@ -138,20 +141,22 @@ public class ArregloVeterinario {
     }
 
     public Veterinario[] obtenerArreglo() {
-        
+
         Veterinario[] veterinariosValidos = new Veterinario[this.indice];
-        
-        if (this.indice == 0) return null;
-        
-        for (int i = 0; i <= this.indice-1; i++) {
+
+        if (this.indice == 0) {
+            return null;
+        }
+
+        for (int i = 0; i <= this.indice - 1; i++) {
             veterinariosValidos[i] = this.veterinarios[i];
         }
-        
+
         return veterinariosValidos;
     }
-    
-    public static String[] getCabecera () {
-        return new String[] {
+
+    public static String[] getCabecera() {
+        return new String[]{
             "ID",
             "Nombres",
             "DNI",
@@ -159,9 +164,7 @@ public class ArregloVeterinario {
             "Especialidad"
         };
     }
-    
-    
-    
+
     public int getIndice() {
         return indice;
     }
@@ -169,7 +172,5 @@ public class ArregloVeterinario {
     public Veterinario[] getVeterinarios() {
         return veterinarios;
     }
-    
-    
 
 }

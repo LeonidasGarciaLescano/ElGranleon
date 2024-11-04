@@ -69,7 +69,7 @@ public class ArregloMedicamento {
 
     }
 
-    public Medicamento[] getAnimales() {
+    public Medicamento[] getMedicamento() {
         return medicamentos;
     }
 

@@ -10,6 +10,7 @@ public class ControlMedico {
     private String id, idAnimal, idVeterinario;
     private Date fechaRegistro, fechaUltimaMod;
     private Diagnostico diagnostico;
+    private InformeMedico informeMedico;
 
     public ControlMedico(String id, String idAnimal, String idVeterinario, Date fechaRegistro, Date fechaUltimaMod) {
         this.id = id;
@@ -69,6 +70,10 @@ public class ControlMedico {
 
         }
 
+    }
+
+    public void registrarInformeMedico(double peso, double altura, String observaciones) {
+        informeMedico = new InformeMedico(peso, altura, observaciones);
     }
 
     public String getId() {

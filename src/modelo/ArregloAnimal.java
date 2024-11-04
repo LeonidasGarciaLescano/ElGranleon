@@ -15,14 +15,16 @@ import java.util.Date;
 public class ArregloAnimal {
 
     private int indice;
-    private Animal[] animales;
+    private final Animal[] animales;
 
     public ArregloAnimal(int tam) {
         this.indice = 0;
         animales = new Animal[tam];
     }
 
-    public void registrarAnimal(String id, String nombre, String especie, String clase, String sexo, Date fechanacimiento, String nombreArea) throws IdDuplicado, LimiteAlcanzado {
+    public void registrarAnimal(String id, 
+            String nombre, 
+            String especie, String clase, String sexo, Date fechanacimiento, String nombreArea) throws IdDuplicado, LimiteAlcanzado {
 
         for (int i = 0; i < this.indice; i++) {
             if (id.equals(animales[i].getId())) {
