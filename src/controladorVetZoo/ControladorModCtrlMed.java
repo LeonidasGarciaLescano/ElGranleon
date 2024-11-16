@@ -27,6 +27,10 @@ public class ControladorModCtrlMed {
 
         vistaModCtrlMedicos.TxtAnimal.setText(ctrlMedicoSel.getNombreAnimal());
 
+        vistaModCtrlMedicos.ChbReceta.setEnabled(false);
+        vistaModCtrlMedicos.ChbSintoma.setEnabled(false);
+        vistaModCtrlMedicos.ChbDiagnostico.setEnabled(false);
+        
         if (ctrlMedicoSel.getInformeMedico() != null) {
             vistaModCtrlMedicos.TxtPeso.setText(String.valueOf(ctrlMedicoSel.getInformeMedico().getPeso()));
             vistaModCtrlMedicos.TxtTalla.setText(String.valueOf(ctrlMedicoSel.getInformeMedico().getAltura()));

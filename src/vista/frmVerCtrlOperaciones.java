@@ -30,8 +30,6 @@ public class frmVerCtrlOperaciones extends javax.swing.JFrame {
         PnlTitulo = new javax.swing.JPanel();
         LblTitulo = new javax.swing.JLabel();
         PnlBusqueda = new javax.swing.JPanel();
-        TxtBuscarID = new javax.swing.JTextField();
-        CmbFiltro = new javax.swing.JComboBox<>();
         PnlTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TblControlOperaciones = new javax.swing.JTable();
@@ -58,27 +56,15 @@ public class frmVerCtrlOperaciones extends javax.swing.JFrame {
                 .addGap(19, 19, 19))
         );
 
-        CmbFiltro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         javax.swing.GroupLayout PnlBusquedaLayout = new javax.swing.GroupLayout(PnlBusqueda);
         PnlBusqueda.setLayout(PnlBusquedaLayout);
         PnlBusquedaLayout.setHorizontalGroup(
             PnlBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PnlBusquedaLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(CmbFiltro, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
-                .addComponent(TxtBuscarID, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(403, Short.MAX_VALUE))
+            .addGap(0, 1000, Short.MAX_VALUE)
         );
         PnlBusquedaLayout.setVerticalGroup(
             PnlBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PnlBusquedaLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(PnlBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(CmbFiltro)
-                    .addComponent(TxtBuscarID, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
-                .addContainerGap(27, Short.MAX_VALUE))
+            .addGap(0, 99, Short.MAX_VALUE)
         );
 
         TblControlOperaciones.setModel(new javax.swing.table.DefaultTableModel(
@@ -168,13 +154,11 @@ public class frmVerCtrlOperaciones extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JComboBox<String> CmbFiltro;
     private javax.swing.JLabel LblTitulo;
     private javax.swing.JPanel PnlBusqueda;
     private javax.swing.JPanel PnlTabla;
     private javax.swing.JPanel PnlTitulo;
     public javax.swing.JTable TblControlOperaciones;
-    public javax.swing.JTextField TxtBuscarID;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

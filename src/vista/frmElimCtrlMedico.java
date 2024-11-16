@@ -30,8 +30,6 @@ public class frmElimCtrlMedico extends javax.swing.JFrame {
         PnlTitulo = new javax.swing.JPanel();
         LblTitulo = new javax.swing.JLabel();
         PnlBusqueda = new javax.swing.JPanel();
-        LblBuscarID = new javax.swing.JLabel();
-        TxtBuscarID = new javax.swing.JTextField();
         PnlTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TblControlMedico = new javax.swing.JTable();
@@ -59,31 +57,15 @@ public class frmElimCtrlMedico extends javax.swing.JFrame {
                 .addGap(17, 17, 17))
         );
 
-        LblBuscarID.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
-        LblBuscarID.setText("Buscar por ID:");
-
         javax.swing.GroupLayout PnlBusquedaLayout = new javax.swing.GroupLayout(PnlBusqueda);
         PnlBusqueda.setLayout(PnlBusquedaLayout);
         PnlBusquedaLayout.setHorizontalGroup(
             PnlBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PnlBusquedaLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(LblBuscarID)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TxtBuscarID, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 1000, Short.MAX_VALUE)
         );
         PnlBusquedaLayout.setVerticalGroup(
             PnlBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PnlBusquedaLayout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(PnlBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PnlBusquedaLayout.createSequentialGroup()
-                        .addComponent(LblBuscarID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap(27, Short.MAX_VALUE))
-                    .addGroup(PnlBusquedaLayout.createSequentialGroup()
-                        .addComponent(TxtBuscarID, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGap(0, 99, Short.MAX_VALUE)
         );
 
         TblControlMedico.setModel(new javax.swing.table.DefaultTableModel(
@@ -191,13 +173,11 @@ public class frmElimCtrlMedico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel LblBuscarID;
     private javax.swing.JLabel LblTitulo;
     private javax.swing.JPanel PnlBusqueda;
     private javax.swing.JPanel PnlTabla;
     private javax.swing.JPanel PnlTitulo;
     public javax.swing.JTable TblControlMedico;
-    public javax.swing.JTextField TxtBuscarID;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables

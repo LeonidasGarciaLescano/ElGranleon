@@ -36,6 +36,9 @@ public class ControladorRegSin {
 
                     chbSin1.setSelected(true);
                     chbSin2.setSelected(true);
+                    
+                    vistaRegSin.TxtNombreSintoma.setText("");
+                    vistaRegSin.TxtGravedad.setText("");
 
                     Utilidades.llenarTablaSintomas(vistaRegSin.TblSintoma, Sistema.nuevoDiagnostico.getSintomas());
                 } else {

@@ -43,6 +43,9 @@ public class ControladorModCtrlOpr {
                     ctrlOprSel.modificarControlOperacion(nombreOperacion, resultado, descripcion, anotaciones, fechaOperacion);
 
                     Utilidades.llenarTablaVerCtrlOpr(tablaControlOperaciones);
+                    
+                    vistaModCtrlOpr.dispose();
+                    
                 } else {
                     JOptionPane.showMessageDialog(vistaModCtrlOpr, "Los datos ingresados no son validos");
                     limpiarCamposModOperacion();

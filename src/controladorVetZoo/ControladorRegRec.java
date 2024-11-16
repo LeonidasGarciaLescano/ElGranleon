@@ -40,6 +40,11 @@ public class ControladorRegRec {
                     chbRec1.setSelected(true);
                     chbRec2.setSelected(true);
 
+                    vistaRegRec.TxtNombreFarmaco.setText("");
+                    vistaRegRec.TxtCantidad.setText("");
+                    vistaRegRec.TxtIntervaloHoras.setText("");
+                    vistaRegRec.TxtDias.setText("");
+
                     Utilidades.llenarTablaMedicamentos(vistaRegRec.TblMedicamentos, Sistema.nuevoDiagnostico.getMedicamentos());
                 } else {
                     JOptionPane.showMessageDialog(vistaRegRec, "Los datos ingresados no son validos");
