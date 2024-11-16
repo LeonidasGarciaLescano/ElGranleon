@@ -15,6 +15,7 @@ public class frmSelCtrlMedicoVer extends javax.swing.JFrame {
      */
     public frmSelCtrlMedicoVer() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

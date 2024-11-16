@@ -39,7 +39,7 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
         LblSaludo = new javax.swing.JLabel();
         PnlInputs = new javax.swing.JPanel();
         PnlGenCrtlMed = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        BtnGenCtrlMed = new javax.swing.JButton();
         PnlVerCtrlMed = new javax.swing.JPanel();
         BtnVerCtrlMed = new javax.swing.JButton();
         PnlModCtrlMed = new javax.swing.JPanel();
@@ -90,14 +90,14 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
         PnlGenCrtlMed.setBackground(new Color(204, 255, 204));
         PnlGenCrtlMed.setLayout(new java.awt.GridBagLayout());
 
-        jButton1.setText("General control médico");
-        jButton1.setPreferredSize(new java.awt.Dimension(700, 80));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BtnGenCtrlMed.setText("General control médico");
+        BtnGenCtrlMed.setPreferredSize(new java.awt.Dimension(700, 80));
+        BtnGenCtrlMed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BtnGenCtrlMedActionPerformed(evt);
             }
         });
-        PnlGenCrtlMed.add(jButton1, new java.awt.GridBagConstraints());
+        PnlGenCrtlMed.add(BtnGenCtrlMed, new java.awt.GridBagConstraints());
 
         PnlInputs.add(PnlGenCrtlMed);
 
@@ -158,9 +158,9 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnModCtrlMedActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void BtnGenCtrlMedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGenCtrlMedActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BtnGenCtrlMedActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,9 +198,10 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnDelCtrlMed;
-    private javax.swing.JButton BtnModCtrlMed;
-    private javax.swing.JButton BtnVerCtrlMed;
+    public javax.swing.JButton BtnDelCtrlMed;
+    public javax.swing.JButton BtnGenCtrlMed;
+    public javax.swing.JButton BtnModCtrlMed;
+    public javax.swing.JButton BtnVerCtrlMed;
     private javax.swing.JLabel LblSaludo;
     private javax.swing.JLabel LblTitulo;
     private javax.swing.JPanel PnlDelCtrlMed;
@@ -210,6 +211,5 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
     private javax.swing.JPanel PnlTitulo;
     private javax.swing.JPanel PnlVerCtrlMed;
     private javax.swing.JPanel PnlVerCtrlMedico;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

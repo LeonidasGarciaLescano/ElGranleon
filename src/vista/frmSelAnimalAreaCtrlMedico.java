@@ -15,6 +15,7 @@ public class frmSelAnimalAreaCtrlMedico extends javax.swing.JFrame {
      */
     public frmSelAnimalAreaCtrlMedico() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -139,10 +140,10 @@ public class frmSelAnimalAreaCtrlMedico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel LblTitulo;
+    public javax.swing.JLabel LblTitulo;
     private javax.swing.JPanel PnlTabla;
     private javax.swing.JPanel PnlTitulo;
-    private javax.swing.JTable TblAnimalesArea;
+    public javax.swing.JTable TblAnimalesArea;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

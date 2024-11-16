@@ -47,23 +47,23 @@ public class frmElimVet extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
-        LblTitulo.setText("Eliminar Veterinario de area designada");
+        LblTitulo.setText("Eliminar Veterinario del zoológico");
 
         javax.swing.GroupLayout PnlTituloLayout = new javax.swing.GroupLayout(PnlTitulo);
         PnlTitulo.setLayout(PnlTituloLayout);
         PnlTituloLayout.setHorizontalGroup(
             PnlTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlTituloLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addGap(75, 75, 75)
                 .addComponent(LblTitulo)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PnlTituloLayout.setVerticalGroup(
             PnlTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlTituloLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(22, 22, 22)
                 .addComponent(LblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         TblVet.setModel(new javax.swing.table.DefaultTableModel(
@@ -96,14 +96,14 @@ public class frmElimVet extends javax.swing.JFrame {
         );
 
         BtnEliminar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        BtnEliminar.setText("Eliminar Veterinario de area");
+        BtnEliminar.setText("Eliminar Veterinario del zoológico");
 
         javax.swing.GroupLayout PnlEliminarLayout = new javax.swing.GroupLayout(PnlEliminar);
         PnlEliminar.setLayout(PnlEliminarLayout);
         PnlEliminarLayout.setHorizontalGroup(
             PnlEliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlEliminarLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(26, Short.MAX_VALUE)
                 .addComponent(BtnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24))
         );

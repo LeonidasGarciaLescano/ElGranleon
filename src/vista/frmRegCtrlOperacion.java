@@ -15,6 +15,7 @@ public class frmRegCtrlOperacion extends javax.swing.JFrame {
      */
     public frmRegCtrlOperacion() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -43,10 +44,10 @@ public class frmRegCtrlOperacion extends javax.swing.JFrame {
         BtnRegistrar = new javax.swing.JToggleButton();
         PnlInformeMedicoRight = new javax.swing.JPanel();
         LblAnotaciones = new javax.swing.JLabel();
-        TxtFechaOperacion = new javax.swing.JTextField();
         LblFechaOperacion = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         TxtAreaAnotaciones = new javax.swing.JTextArea();
+        DateChFechaOperacion = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -189,14 +190,15 @@ public class frmRegCtrlOperacion extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addGroup(PnlInformeMedicoRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PnlInformeMedicoRightLayout.createSequentialGroup()
-                        .addComponent(LblFechaOperacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(420, 420, 420))
-                    .addGroup(PnlInformeMedicoRightLayout.createSequentialGroup()
                         .addGroup(PnlInformeMedicoRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(TxtFechaOperacion, javax.swing.GroupLayout.PREFERRED_SIZE, 436, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(LblAnotaciones))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlInformeMedicoRightLayout.createSequentialGroup()
+                        .addGroup(PnlInformeMedicoRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(DateChFechaOperacion, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(LblFechaOperacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(420, 420, 420))))
         );
         PnlInformeMedicoRightLayout.setVerticalGroup(
             PnlInformeMedicoRightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,11 +206,11 @@ public class frmRegCtrlOperacion extends javax.swing.JFrame {
                 .addGap(67, 67, 67)
                 .addComponent(LblFechaOperacion, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(TxtFechaOperacion, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25)
+                .addComponent(DateChFechaOperacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
                 .addComponent(LblAnotaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 219, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -220,7 +222,7 @@ public class frmRegCtrlOperacion extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(PnlInformeMedicoLeft, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PnlInformeMedicoRight, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addComponent(PnlInformeMedicoRight, javax.swing.GroupLayout.PREFERRED_SIZE, 484, Short.MAX_VALUE))
             .addComponent(PnlRegistrarControlOperacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -278,7 +280,8 @@ public class frmRegCtrlOperacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton BtnRegistrar;
+    public javax.swing.JToggleButton BtnRegistrar;
+    public com.toedter.calendar.JDateChooser DateChFechaOperacion;
     private javax.swing.JLabel LblAnimal;
     private javax.swing.JLabel LblAnotaciones;
     private javax.swing.JLabel LblDescripcion;
@@ -291,12 +294,11 @@ public class frmRegCtrlOperacion extends javax.swing.JFrame {
     private javax.swing.JPanel PnlInformeMedicoRight;
     private javax.swing.JPanel PnlRegistrar;
     private javax.swing.JPanel PnlRegistrarControlOperacion;
-    private javax.swing.JTextField TxtAnimal;
-    private javax.swing.JTextArea TxtAreaAnotaciones;
-    private javax.swing.JTextArea TxtAreaDescripcion;
-    private javax.swing.JTextField TxtFechaOperacion;
-    private javax.swing.JTextField TxtNombreOperacion;
-    private javax.swing.JTextField TxtResultado;
+    public javax.swing.JTextField TxtAnimal;
+    public javax.swing.JTextArea TxtAreaAnotaciones;
+    public javax.swing.JTextArea TxtAreaDescripcion;
+    public javax.swing.JTextField TxtNombreOperacion;
+    public javax.swing.JTextField TxtResultado;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables

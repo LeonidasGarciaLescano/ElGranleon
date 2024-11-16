@@ -172,6 +172,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Quitar veterinarios"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="BtnEliminarVet">
           <Properties>
@@ -180,6 +183,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Eliminar veterinario"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="BtnReasignarArea">
           <Properties>
@@ -188,6 +194,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Reasignar &#xe1;rea"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="BtnAsignarArea">
           <Properties>
@@ -196,6 +205,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Asignar &#xe1;rea"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

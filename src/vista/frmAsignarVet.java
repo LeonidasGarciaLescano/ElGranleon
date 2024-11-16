@@ -43,6 +43,8 @@ public class frmAsignarVet extends javax.swing.JFrame {
         PnlNombre = new javax.swing.JPanel();
         TxtNombre = new javax.swing.JTextField();
         LblNombre = new javax.swing.JLabel();
+        CmbAreas = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
         PnlArea = new javax.swing.JPanel();
         LblArea = new javax.swing.JLabel();
         TxtArea = new javax.swing.JTextField();
@@ -129,6 +131,10 @@ public class frmAsignarVet extends javax.swing.JFrame {
         LblNombre.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         LblNombre.setText("Nombre:");
 
+        CmbAreas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel1.setText("Area");
+
         javax.swing.GroupLayout PnlNombreLayout = new javax.swing.GroupLayout(PnlNombre);
         PnlNombre.setLayout(PnlNombreLayout);
         PnlNombreLayout.setHorizontalGroup(
@@ -138,7 +144,11 @@ public class frmAsignarVet extends javax.swing.JFrame {
                 .addComponent(LblNombre)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TxtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(CmbAreas, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
         );
         PnlNombreLayout.setVerticalGroup(
             PnlNombreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -147,7 +157,10 @@ public class frmAsignarVet extends javax.swing.JFrame {
                 .addGroup(PnlNombreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(LblNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlNombreLayout.createSequentialGroup()
-                        .addComponent(TxtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(PnlNombreLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(TxtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CmbAreas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1))
                         .addContainerGap())))
         );
 
@@ -245,7 +258,8 @@ public class frmAsignarVet extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnAsignarVetArea;
+    public javax.swing.JButton BtnAsignarVetArea;
+    public javax.swing.JComboBox<String> CmbAreas;
     private javax.swing.JLabel LblArea;
     private javax.swing.JLabel LblNombre;
     private javax.swing.JLabel LblTitulo;
@@ -255,8 +269,9 @@ public class frmAsignarVet extends javax.swing.JFrame {
     public javax.swing.JPanel PnlTblVet;
     private javax.swing.JPanel PnlTitulo;
     public javax.swing.JTable TblVet;
-    private javax.swing.JTextField TxtArea;
-    private javax.swing.JTextField TxtNombre;
+    public javax.swing.JTextField TxtArea;
+    public javax.swing.JTextField TxtNombre;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

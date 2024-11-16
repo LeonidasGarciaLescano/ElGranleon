@@ -15,6 +15,7 @@ public class frmVerCtrlMedicos extends javax.swing.JFrame {
      */
     public frmVerCtrlMedicos() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -178,8 +179,8 @@ public class frmVerCtrlMedicos extends javax.swing.JFrame {
     private javax.swing.JPanel PnlBusqueda;
     private javax.swing.JPanel PnlTabla;
     private javax.swing.JPanel PnlTitulo;
-    private javax.swing.JTable TblControlMedicos;
-    private javax.swing.JTextField TxtBuscarID;
+    public javax.swing.JTable TblControlMedicos;
+    public javax.swing.JTextField TxtBuscarID;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

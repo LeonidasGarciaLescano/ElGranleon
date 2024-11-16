@@ -15,6 +15,7 @@ public class frmModSintomas extends javax.swing.JFrame {
      */
     public frmModSintomas() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -35,7 +36,6 @@ public class frmModSintomas extends javax.swing.JFrame {
         TxtGravedad = new javax.swing.JTextField();
         LblGravedad = new javax.swing.JLabel();
         BtnRegistrarSintoma = new javax.swing.JToggleButton();
-        BtnModificarSintoma = new javax.swing.JToggleButton();
         PnlTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TblSintoma = new javax.swing.JTable();
@@ -87,14 +87,6 @@ public class frmModSintomas extends javax.swing.JFrame {
             }
         });
 
-        BtnModificarSintoma.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        BtnModificarSintoma.setText("Modificar Sintoma");
-        BtnModificarSintoma.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnModificarSintomaActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout PnlSintomaLayout = new javax.swing.GroupLayout(PnlSintoma);
         PnlSintoma.setLayout(PnlSintomaLayout);
         PnlSintomaLayout.setHorizontalGroup(
@@ -106,22 +98,19 @@ public class frmModSintomas extends javax.swing.JFrame {
                         .addComponent(LblNuevoSintoma)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(PnlSintomaLayout.createSequentialGroup()
-                        .addGroup(PnlSintomaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(PnlSintomaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(PnlSintomaLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(BtnRegistrarSintoma, javax.swing.GroupLayout.PREFERRED_SIZE, 652, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PnlSintomaLayout.createSequentialGroup()
                                 .addComponent(LblNombreSintoma)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(TxtNombreSintoma))
-                            .addGroup(PnlSintomaLayout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, PnlSintomaLayout.createSequentialGroup()
                                 .addComponent(LblGravedad)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                                 .addComponent(TxtGravedad, javax.swing.GroupLayout.PREFERRED_SIZE, 536, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(16, Short.MAX_VALUE))))
-            .addGroup(PnlSintomaLayout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(BtnRegistrarSintoma, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(BtnModificarSintoma, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32))
         );
         PnlSintomaLayout.setVerticalGroup(
             PnlSintomaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,9 +126,7 @@ public class frmModSintomas extends javax.swing.JFrame {
                     .addComponent(TxtGravedad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LblGravedad, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                .addGroup(PnlSintomaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BtnRegistrarSintoma, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BtnModificarSintoma, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(BtnRegistrarSintoma, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         PnlTabla.setPreferredSize(new java.awt.Dimension(700, 210));
@@ -235,10 +222,6 @@ public class frmModSintomas extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnRegistrarActionPerformed
 
-    private void BtnModificarSintomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnModificarSintomaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BtnModificarSintomaActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -278,9 +261,8 @@ public class frmModSintomas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton BtnModificarSintoma;
-    private javax.swing.JButton BtnRegistrar;
-    private javax.swing.JToggleButton BtnRegistrarSintoma;
+    public javax.swing.JButton BtnRegistrar;
+    public javax.swing.JToggleButton BtnRegistrarSintoma;
     private javax.swing.JLabel LblGravedad;
     private javax.swing.JLabel LblNombreSintoma;
     private javax.swing.JLabel LblNuevoSintoma;
@@ -289,9 +271,9 @@ public class frmModSintomas extends javax.swing.JFrame {
     private javax.swing.JPanel PnlSintoma;
     private javax.swing.JPanel PnlTabla;
     private javax.swing.JPanel PnlTitulo;
-    private javax.swing.JTable TblSintoma;
-    private javax.swing.JTextField TxtGravedad;
-    private javax.swing.JTextField TxtNombreSintoma;
+    public javax.swing.JTable TblSintoma;
+    public javax.swing.JTextField TxtGravedad;
+    public javax.swing.JTextField TxtNombreSintoma;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

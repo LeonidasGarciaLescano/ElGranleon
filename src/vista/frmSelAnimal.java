@@ -21,6 +21,7 @@ public class frmSelAnimal extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         setResizable(false);
         setSize(1000, 620);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**

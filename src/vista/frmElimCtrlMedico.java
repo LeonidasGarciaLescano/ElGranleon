@@ -15,6 +15,7 @@ public class frmElimCtrlMedico extends javax.swing.JFrame {
      */
     public frmElimCtrlMedico() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -35,7 +36,6 @@ public class frmElimCtrlMedico extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         TblControlMedico = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
-        BtnEliminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -113,24 +113,15 @@ public class frmElimCtrlMedico extends javax.swing.JFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
         );
 
-        BtnEliminar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        BtnEliminar.setText("Eliminar");
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
-                .addComponent(BtnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
+            .addGap(0, 1000, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addComponent(BtnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+            .addGap(0, 80, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -200,14 +191,13 @@ public class frmElimCtrlMedico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnEliminar;
     private javax.swing.JLabel LblBuscarID;
     private javax.swing.JLabel LblTitulo;
     private javax.swing.JPanel PnlBusqueda;
     private javax.swing.JPanel PnlTabla;
     private javax.swing.JPanel PnlTitulo;
-    private javax.swing.JTable TblControlMedico;
-    private javax.swing.JTextField TxtBuscarID;
+    public javax.swing.JTable TblControlMedico;
+    public javax.swing.JTextField TxtBuscarID;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables

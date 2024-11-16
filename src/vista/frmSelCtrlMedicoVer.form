@@ -98,11 +98,9 @@
                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Component id="jTextField1" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="TxtBuscarID" max="32767" attributes="0"/>
-                          <Component id="LblBuscarID" alignment="0" max="32767" attributes="0"/>
-                          <Component id="LblBuscarID1" alignment="1" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="TxtBuscarID" max="32767" attributes="0"/>
+                      <Component id="LblBuscarID" alignment="0" max="32767" attributes="0"/>
+                      <Component id="LblBuscarID1" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="27" max="32767" attributes="0"/>
               </Group>

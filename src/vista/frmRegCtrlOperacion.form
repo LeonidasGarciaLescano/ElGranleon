@@ -27,7 +27,7 @@
           <Group type="102" attributes="0">
               <Component id="PnlInformeMedicoLeft" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="PnlInformeMedicoRight" pref="0" max="32767" attributes="0"/>
+              <Component id="PnlInformeMedicoRight" pref="484" max="32767" attributes="0"/>
           </Group>
           <Component id="PnlRegistrarControlOperacion" alignment="0" max="32767" attributes="0"/>
       </Group>
@@ -202,14 +202,26 @@
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
         <Component class="javax.swing.JTextField" name="TxtAnimal">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="TxtNombreOperacion">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="TxtResultado">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="LblAnimal">
           <Properties>
@@ -254,6 +266,9 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BtnRegistrarActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>
@@ -266,16 +281,18 @@
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="LblFechaOperacion" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="420" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jScrollPane2" min="-2" pref="436" max="-2" attributes="0"/>
-                              <Component id="TxtFechaOperacion" min="-2" pref="436" max="-2" attributes="0"/>
                               <Component id="LblAnotaciones" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="DateChFechaOperacion" alignment="0" max="32767" attributes="0"/>
+                              <Component id="LblFechaOperacion" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="420" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -287,11 +304,11 @@
                   <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                   <Component id="LblFechaOperacion" min="-2" pref="29" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="TxtFechaOperacion" min="-2" pref="29" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  <Component id="DateChFechaOperacion" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Component id="LblAnotaciones" min="-2" pref="29" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jScrollPane2" max="32767" attributes="0"/>
+                  <Component id="jScrollPane2" pref="219" max="32767" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -305,8 +322,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Anotaciones:"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="TxtFechaOperacion">
         </Component>
         <Component class="javax.swing.JLabel" name="LblFechaOperacion">
           <Properties>
@@ -328,9 +343,17 @@
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
             </Component>
           </SubComponents>
         </Container>
+        <Component class="com.toedter.calendar.JDateChooser" name="DateChFechaOperacion">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>

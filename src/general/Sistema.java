@@ -1,34 +1,35 @@
 package general;
 
-import modelo.Area;
-import modelo.ArregloAnimal;
-import modelo.ArregloVeterinario;
-import modelo.Veterinario;
-import modelo.VeterinarioCirujano;
-import modelo.VeterinarioZoologico;
-import modelo.Zoologico;
+import modeloArea.Area;
+import modeloAnimal.ArregloAnimal;
+import modeloArea.ArregloArea;
+import modeloVeterinario.ArregloVeterinario;
+import modeloDiagnostico.Diagnostico;
+import modeloExamenFisico.ExamenFisico;
+import modeloHistoriaMedica.HistoriaMedica;
+import modeloInformeMedico.InformeMedico;
+import modeloVeterinario.Veterinario;
+import modeloVeterinario.VeterinarioCirujano;
+import modeloVeterinario.VeterinarioZoologico;
 
 /**
  * @author Leonidas Garcia Lescano
  */
 public class Sistema {
 
-    public static Zoologico zoo;
+    //DATOS GENERALES
+    public static ArregloArea areas = new ArregloArea();
+    public static ArregloVeterinario veterinarios = new ArregloVeterinario(60);
 
-    public static Administrador administrador;
-    public static Area area;    
-    public static ArregloVeterinario[] veterinarios = new ArregloVeterinario[4];
-    public static ArregloVeterinario veterinariosNoAsignados = new ArregloVeterinario(5);
-    public static ArregloAnimal[] animales = new ArregloAnimal[3];
-    public static VeterinarioCirujano veterinarioCirujano;
-    public static VeterinarioZoologico veterinarioZoologico;
+    //SESION DE VETERINARIO;
+    public static Area areaVeterinario;
+    public static Veterinario veterinarioSesion;
 
-    public static Administrador[] administradores = {
-        new Administrador("ADM-1234", "1234"),
-        new Administrador("ADM-6969", "6969"),
-        new Administrador("ADM-4321", "4321"),
-        new Administrador("ADM-0987", "0987"),
-        new Administrador("ADM-5678", "5678")
-    };
+    //REGISTRO DE CONTROL MEDICO
+    public static Diagnostico nuevoDiagnostico;
+    public static InformeMedico nuevoInformeMedico;
+
+    //A QUITAR EN UN FUTURO
+    public static int codigosHistorias = 1;
 
 }

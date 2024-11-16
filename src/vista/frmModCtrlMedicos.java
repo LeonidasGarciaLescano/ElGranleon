@@ -15,6 +15,7 @@ public class frmModCtrlMedicos extends javax.swing.JFrame {
      */
     public frmModCtrlMedicos() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -337,11 +338,11 @@ public class frmModCtrlMedicos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnModificar;
-    private javax.swing.JToggleButton BtnModificarDiagnostico;
-    private javax.swing.JCheckBox ChbDiagnostico;
-    private javax.swing.JCheckBox ChbReceta;
-    private javax.swing.JCheckBox ChbSintoma;
+    public javax.swing.JButton BtnModificar;
+    public javax.swing.JToggleButton BtnModificarDiagnostico;
+    public javax.swing.JCheckBox ChbDiagnostico;
+    public javax.swing.JCheckBox ChbReceta;
+    public javax.swing.JCheckBox ChbSintoma;
     private javax.swing.JLabel LblAnimal;
     private javax.swing.JLabel LblInformeMedico;
     private javax.swing.JLabel LblObservaciones;
@@ -352,10 +353,10 @@ public class frmModCtrlMedicos extends javax.swing.JFrame {
     private javax.swing.JPanel PnlModificar;
     private javax.swing.JPanel PnlSecundario;
     private javax.swing.JPanel PnlTitulo;
-    private javax.swing.JTextField TxtAnimal;
-    private javax.swing.JTextArea TxtAreaObservaciones;
-    private javax.swing.JTextField TxtPeso;
-    private javax.swing.JTextField TxtTalla;
+    public javax.swing.JTextField TxtAnimal;
+    public javax.swing.JTextArea TxtAreaObservaciones;
+    public javax.swing.JTextField TxtPeso;
+    public javax.swing.JTextField TxtTalla;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

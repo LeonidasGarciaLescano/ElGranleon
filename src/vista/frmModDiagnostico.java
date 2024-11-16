@@ -15,6 +15,7 @@ public class frmModDiagnostico extends javax.swing.JFrame {
      */
     public frmModDiagnostico() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -145,8 +146,7 @@ public class frmModDiagnostico extends javax.swing.JFrame {
                 .addGroup(PnlDiagnosticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PnlDiagnosticoLayout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addComponent(TxtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(TxtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(PnlDiagnosticoLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                         .addComponent(LblResultado)
@@ -338,11 +338,11 @@ public class frmModDiagnostico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnModReceta;
-    private javax.swing.JButton BtnModSintoma;
-    private javax.swing.JButton BtnModificar;
-    private javax.swing.JCheckBox ChbReceta;
-    private javax.swing.JCheckBox ChbSintoma;
+    public javax.swing.JButton BtnModReceta;
+    public javax.swing.JButton BtnModSintoma;
+    public javax.swing.JButton BtnModificar;
+    public javax.swing.JCheckBox ChbReceta;
+    public javax.swing.JCheckBox ChbSintoma;
     private javax.swing.JLabel LblDescripcion;
     private javax.swing.JLabel LblDiagnostico;
     private javax.swing.JLabel LblEstadoFisico;
@@ -355,11 +355,11 @@ public class frmModDiagnostico extends javax.swing.JFrame {
     private javax.swing.JPanel PnlExamenFisico;
     private javax.swing.JPanel PnlRegistrar;
     private javax.swing.JPanel PnlTitulo;
-    private javax.swing.JTextArea TxtAreaDescripcion;
-    private javax.swing.JTextArea TxtAreaEstadoFisico;
-    private javax.swing.JTextField TxtFrecuencia;
-    private javax.swing.JTextField TxtResultado;
-    private javax.swing.JTextField TxtTemperatura;
+    public javax.swing.JTextArea TxtAreaDescripcion;
+    public javax.swing.JTextArea TxtAreaEstadoFisico;
+    public javax.swing.JTextField TxtFrecuencia;
+    public javax.swing.JTextField TxtResultado;
+    public javax.swing.JTextField TxtTemperatura;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

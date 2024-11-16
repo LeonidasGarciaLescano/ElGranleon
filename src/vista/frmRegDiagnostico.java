@@ -15,6 +15,9 @@ public class frmRegDiagnostico extends javax.swing.JFrame {
      */
     public frmRegDiagnostico() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        ChbReceta.setEnabled(false);
+        ChbSintoma.setEnabled(false);
     }
 
     /**
@@ -168,7 +171,7 @@ public class frmRegDiagnostico extends javax.swing.JFrame {
         PnlRegistrar.setPreferredSize(new java.awt.Dimension(838, 80));
 
         BtnRegistrar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        BtnRegistrar.setText("Registrar");
+        BtnRegistrar.setText("Registrar diagnóstico");
 
         javax.swing.GroupLayout PnlRegistrarLayout = new javax.swing.GroupLayout(PnlRegistrar);
         PnlRegistrar.setLayout(PnlRegistrarLayout);
@@ -336,11 +339,11 @@ public class frmRegDiagnostico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnAddReceta;
-    private javax.swing.JButton BtnAddSintoma;
-    private javax.swing.JButton BtnRegistrar;
-    private javax.swing.JCheckBox ChbReceta;
-    private javax.swing.JCheckBox ChbSintoma;
+    public javax.swing.JButton BtnAddReceta;
+    public javax.swing.JButton BtnAddSintoma;
+    public javax.swing.JButton BtnRegistrar;
+    public javax.swing.JCheckBox ChbReceta;
+    public javax.swing.JCheckBox ChbSintoma;
     private javax.swing.JLabel LblDescripcion;
     private javax.swing.JLabel LblDiagnostico;
     private javax.swing.JLabel LblEstadoFisico;
@@ -353,11 +356,11 @@ public class frmRegDiagnostico extends javax.swing.JFrame {
     private javax.swing.JPanel PnlExamenFisico;
     private javax.swing.JPanel PnlRegistrar;
     private javax.swing.JPanel PnlTitulo;
-    private javax.swing.JTextArea TxtAreaDescripcion;
-    private javax.swing.JTextArea TxtAreaEstadoFisico;
-    private javax.swing.JTextField TxtFrecuencia;
-    private javax.swing.JTextField TxtResultado;
-    private javax.swing.JTextField TxtTemperatura;
+    public javax.swing.JTextArea TxtAreaDescripcion;
+    public javax.swing.JTextArea TxtAreaEstadoFisico;
+    public javax.swing.JTextField TxtFrecuencia;
+    public javax.swing.JTextField TxtResultado;
+    public javax.swing.JTextField TxtTemperatura;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

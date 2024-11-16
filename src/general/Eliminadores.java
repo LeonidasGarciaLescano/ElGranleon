@@ -1,20 +1,21 @@
 package general;
 
-import modelo.Animal;
-import modelo.Area;
-import modelo.ControlMedico;
-import modelo.ControlOperacion;
-import modelo.Medicamento;
-import modelo.Sintoma;
-import modelo.Veterinario;
+import modeloAnimal.Animal;
+import modeloArea.Area;
+import modeloControlMedico.ControlMedico;
+import modeloControlOperacion.ControlOperacion;
+import modeloHistoriaMedica.HistoriaMedica;
+import modeloMedicamento.Medicamento;
+import modeloSintoma.Sintoma;
+import modeloVeterinario.Veterinario;
 
 /**
  * @author Leonidas Garcia Lescano
  */
 public class Eliminadores {
 
-    public static int eliminarElementoArea(Area[] arreglo, String id) {
-        int n = arreglo.length;
+    public static int eliminarElementoArea(Area[] arreglo, int tamValido, String id) {
+        int n = tamValido;
         int index = 0;
 
         for (int i = 0; i < n; i++) {
@@ -26,9 +27,23 @@ public class Eliminadores {
 
         return index;
     }
-    
-    public static int eliminarElementoAnimal(Animal[] arreglo, String id) {
-        int n = arreglo.length;
+
+    public static int eliminarElementoHistoriaMedica(HistoriaMedica[] arreglo, int tamValido, int id) {
+        int n = tamValido;
+        int index = 0;
+
+        for (int i = 0; i < n; i++) {
+            if (!(arreglo[i].getId() == id)) {
+                arreglo[index] = arreglo[i];
+                index++;
+            }
+        }
+
+        return index;
+    }
+
+    public static int eliminarElementoAnimal(Animal[] arreglo, int tamValido, String id) {
+        int n = tamValido;
         int index = 0;
 
         for (int i = 0; i < n; i++) {
@@ -41,8 +56,8 @@ public class Eliminadores {
         return index;
     }
 
-    public static int eliminarElementoVeterinario(Veterinario[] arreglo, String id) {
-        int n = arreglo.length;
+    public static int eliminarElementoVeterinario(Veterinario[] arreglo, int tamValido, String id) {
+        int n = tamValido;
         int index = 0;
 
         for (int i = 0; i < n; i++) {
@@ -55,12 +70,12 @@ public class Eliminadores {
         return index;
     }
 
-    public static int eliminarElementoControlMedico(ControlMedico[] arreglo, String id) {
-        int n = arreglo.length;
+    public static int eliminarElementoControlMedico(ControlMedico[] arreglo, int tamValido, int id) {
+        int n = tamValido;
         int index = 0;
 
         for (int i = 0; i < n; i++) {
-            if (!arreglo[i].getId().equals(id)) {
+            if (!(arreglo[i].getIdCtrlMedico() == id)) {
                 arreglo[index] = arreglo[i];
                 index++;
             }
@@ -69,12 +84,12 @@ public class Eliminadores {
         return index;
     }
 
-    public static int eliminarElementoControlOperacion(ControlOperacion[] arreglo, String id) {
-        int n = arreglo.length;
+    public static int eliminarElementoControlOperacion(ControlOperacion[] arreglo, int tamValido, int id) {
+        int n = tamValido;
         int index = 0;
 
         for (int i = 0; i < n; i++) {
-            if (!arreglo[i].getId().equals(id)) {
+            if (!(arreglo[i].getIdCtrlOpr() == id)) {
                 arreglo[index] = arreglo[i];
                 index++;
             }
@@ -83,8 +98,24 @@ public class Eliminadores {
         return index;
     }
 
-    public static int eliminarElementoSintoma(Sintoma[] arreglo, String id) {
-        int n = arreglo.length;
+    public static int eliminarElementoSintoma(Sintoma[] arreglo, int tamValido, String nombre) {
+        int n = tamValido;
+        int index = 0;
+
+        System.out.println(n);
+
+        for (int i = 0; i < n; i++) {
+            if (!arreglo[i].getNombre().equals(nombre)) {
+                arreglo[index] = arreglo[i];
+                index++;
+            }
+        }
+
+        return index;
+    }
+
+    public static int eliminarElementoMedicamento(Medicamento[] arreglo, int tamValido, String id) {
+        int n = tamValido;
         int index = 0;
 
         for (int i = 0; i < n; i++) {
@@ -96,21 +127,5 @@ public class Eliminadores {
 
         return index;
     }
-    
-    public static int eliminarElementoMedicamento(Medicamento[] arreglo, String id) {
-        int n = arreglo.length;
-        int index = 0;
 
-        for (int i = 0; i < n; i++) {
-            if (!arreglo[i].getNombre().equals(id)) {
-                arreglo[index] = arreglo[i];
-                index++;
-            }
-        }
-
-        return index;
-    }
-    
-    
-    
 }

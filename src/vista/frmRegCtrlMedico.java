@@ -15,6 +15,10 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
      */
     public frmRegCtrlMedico() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        ChbDiagnostico.setEnabled(false);
+        ChbReceta.setEnabled(false);
+        ChbSintoma.setEnabled(false);
     }
 
     /**
@@ -48,7 +52,6 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
         BtnRegistrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1000, 620));
         setMinimumSize(new java.awt.Dimension(1000, 620));
 
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
@@ -337,11 +340,11 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton BtnAñadirDiagnostico;
-    private javax.swing.JButton BtnRegistrar;
-    private javax.swing.JCheckBox ChbDiagnostico;
-    private javax.swing.JCheckBox ChbReceta;
-    private javax.swing.JCheckBox ChbSintoma;
+    public javax.swing.JToggleButton BtnAñadirDiagnostico;
+    public javax.swing.JButton BtnRegistrar;
+    public javax.swing.JCheckBox ChbDiagnostico;
+    public javax.swing.JCheckBox ChbReceta;
+    public javax.swing.JCheckBox ChbSintoma;
     private javax.swing.JLabel LblAnimal;
     private javax.swing.JLabel LblInformeMedico;
     private javax.swing.JLabel LblObservaciones;
@@ -352,10 +355,10 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
     private javax.swing.JPanel PnlRegistrar;
     private javax.swing.JPanel PnlSecundario;
     private javax.swing.JPanel PnlTitulo;
-    private javax.swing.JTextField TxtAnimal;
-    private javax.swing.JTextArea TxtAreaObservaciones;
-    private javax.swing.JTextField TxtPeso;
-    private javax.swing.JTextField TxtTalla;
+    public javax.swing.JTextField TxtAnimal;
+    public javax.swing.JTextArea TxtAreaObservaciones;
+    public javax.swing.JTextField TxtPeso;
+    public javax.swing.JTextField TxtTalla;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

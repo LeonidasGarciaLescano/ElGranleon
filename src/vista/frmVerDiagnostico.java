@@ -15,6 +15,7 @@ public class frmVerDiagnostico extends javax.swing.JFrame {
      */
     public frmVerDiagnostico() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -344,14 +345,14 @@ public class frmVerDiagnostico extends javax.swing.JFrame {
     private javax.swing.JPanel PnlReceta;
     private javax.swing.JPanel PnlSintomas;
     private javax.swing.JPanel PnlTitulo;
-    private javax.swing.JTable TblReceta;
-    private javax.swing.JTable TblSintomas;
-    private javax.swing.JTextArea TxtAreaDescripcion;
-    private javax.swing.JTextField TxtEstado;
-    private javax.swing.JTextField TxtFechaExamen;
-    private javax.swing.JTextField TxtFrecuencia;
-    private javax.swing.JTextField TxtResultado;
-    private javax.swing.JTextField TxtTemperatura;
+    public javax.swing.JTable TblReceta;
+    public javax.swing.JTable TblSintomas;
+    public javax.swing.JTextArea TxtAreaDescripcion;
+    public javax.swing.JTextField TxtEstado;
+    public javax.swing.JTextField TxtFechaExamen;
+    public javax.swing.JTextField TxtFrecuencia;
+    public javax.swing.JTextField TxtResultado;
+    public javax.swing.JTextField TxtTemperatura;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;

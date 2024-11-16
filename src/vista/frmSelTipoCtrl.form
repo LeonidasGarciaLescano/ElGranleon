@@ -26,9 +26,9 @@
           <Component id="jPanel1" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" pref="221" max="-2" attributes="0"/>
+              <Component id="BtnCtrlMedico" min="-2" pref="221" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" pref="229" max="-2" attributes="0"/>
+              <Component id="BtnCtrlOpr" min="-2" pref="229" max="-2" attributes="0"/>
               <EmptySpace pref="77" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -39,8 +39,8 @@
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jButton1" pref="209" max="32767" attributes="0"/>
-                  <Component id="jButton2" max="32767" attributes="0"/>
+                  <Component id="BtnCtrlMedico" pref="209" max="32767" attributes="0"/>
+                  <Component id="BtnCtrlOpr" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="0" pref="167" max="32767" attributes="0"/>
           </Group>
@@ -81,15 +81,21 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="BtnCtrlMedico">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ver controles medicos"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="BtnCtrlOpr">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ver controles de operaciones"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

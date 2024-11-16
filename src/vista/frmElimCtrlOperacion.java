@@ -15,6 +15,7 @@ public class frmElimCtrlOperacion extends javax.swing.JFrame {
      */
     public frmElimCtrlOperacion() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -29,13 +30,12 @@ public class frmElimCtrlOperacion extends javax.swing.JFrame {
         PnlTitulo = new javax.swing.JPanel();
         LblTitulo = new javax.swing.JLabel();
         PnlBusqueda = new javax.swing.JPanel();
-        LblBuscarID = new javax.swing.JLabel();
-        TxtBuscarID = new javax.swing.JTextField();
+        TxtBusqueda = new javax.swing.JTextField();
+        CmbFiltros = new javax.swing.JComboBox<>();
         PnlTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TblControlOperacion = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
-        BtnEliminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,31 +59,27 @@ public class frmElimCtrlOperacion extends javax.swing.JFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
-        LblBuscarID.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
-        LblBuscarID.setText("Buscar por ID:");
+        CmbFiltros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout PnlBusquedaLayout = new javax.swing.GroupLayout(PnlBusqueda);
         PnlBusqueda.setLayout(PnlBusquedaLayout);
         PnlBusquedaLayout.setHorizontalGroup(
             PnlBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlBusquedaLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(LblBuscarID)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(TxtBuscarID, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addComponent(CmbFiltros, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(TxtBusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(403, Short.MAX_VALUE))
         );
         PnlBusquedaLayout.setVerticalGroup(
             PnlBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlBusquedaLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addGroup(PnlBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PnlBusquedaLayout.createSequentialGroup()
-                        .addComponent(LblBuscarID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap(27, Short.MAX_VALUE))
-                    .addGroup(PnlBusquedaLayout.createSequentialGroup()
-                        .addComponent(TxtBuscarID, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGroup(PnlBusquedaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CmbFiltros)
+                    .addComponent(TxtBusqueda, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         TblControlOperacion.setModel(new javax.swing.table.DefaultTableModel(
@@ -113,24 +109,15 @@ public class frmElimCtrlOperacion extends javax.swing.JFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 331, Short.MAX_VALUE)
         );
 
-        BtnEliminar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        BtnEliminar.setText("Eliminar");
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(26, Short.MAX_VALUE)
-                .addComponent(BtnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
+            .addGap(0, 1000, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addComponent(BtnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
+            .addGap(0, 80, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -198,14 +185,13 @@ public class frmElimCtrlOperacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnEliminar;
-    private javax.swing.JLabel LblBuscarID;
+    public javax.swing.JComboBox<String> CmbFiltros;
     private javax.swing.JLabel LblTitulo;
     private javax.swing.JPanel PnlBusqueda;
     private javax.swing.JPanel PnlTabla;
     private javax.swing.JPanel PnlTitulo;
-    private javax.swing.JTable TblControlOperacion;
-    private javax.swing.JTextField TxtBuscarID;
+    public javax.swing.JTable TblControlOperacion;
+    public javax.swing.JTextField TxtBusqueda;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables

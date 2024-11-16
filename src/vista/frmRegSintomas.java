@@ -15,6 +15,7 @@ public class frmRegSintomas extends javax.swing.JFrame {
      */
     public frmRegSintomas() {
         initComponents();
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -39,7 +40,6 @@ public class frmRegSintomas extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         TblSintoma = new javax.swing.JTable();
         PnlRegistrar = new javax.swing.JPanel();
-        BtnRegistrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -162,29 +162,15 @@ public class frmRegSintomas extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        BtnRegistrar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        BtnRegistrar.setText("Registrar");
-        BtnRegistrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnRegistrarActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout PnlRegistrarLayout = new javax.swing.GroupLayout(PnlRegistrar);
         PnlRegistrar.setLayout(PnlRegistrarLayout);
         PnlRegistrarLayout.setHorizontalGroup(
             PnlRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PnlRegistrarLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(BtnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 700, Short.MAX_VALUE)
         );
         PnlRegistrarLayout.setVerticalGroup(
             PnlRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlRegistrarLayout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
-                .addComponent(BtnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+            .addGap(0, 80, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -218,10 +204,6 @@ public class frmRegSintomas extends javax.swing.JFrame {
     private void BtnRegistrarSintomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegistrarSintomaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnRegistrarSintomaActionPerformed
-
-    private void BtnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegistrarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BtnRegistrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -260,8 +242,7 @@ public class frmRegSintomas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnRegistrar;
-    private javax.swing.JToggleButton BtnRegistrarSintoma;
+    public javax.swing.JToggleButton BtnRegistrarSintoma;
     private javax.swing.JLabel LblGravedad;
     private javax.swing.JLabel LblNombreSintoma;
     private javax.swing.JLabel LblNuevoSintoma;
@@ -270,9 +251,9 @@ public class frmRegSintomas extends javax.swing.JFrame {
     private javax.swing.JPanel PnlSintoma;
     private javax.swing.JPanel PnlTabla;
     private javax.swing.JPanel PnlTitulo;
-    private javax.swing.JTable TblSintoma;
-    private javax.swing.JTextField TxtGravedad;
-    private javax.swing.JTextField TxtNombreSintoma;
+    public javax.swing.JTable TblSintoma;
+    public javax.swing.JTextField TxtGravedad;
+    public javax.swing.JTextField TxtNombreSintoma;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

@@ -194,10 +194,10 @@ public class frmGestVet extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BtnAsignarArea;
-    private javax.swing.JButton BtnEliminarVet;
-    private javax.swing.JButton BtnQuitarVet;
-    private javax.swing.JButton BtnReasignarArea;
+    public javax.swing.JButton BtnAsignarArea;
+    public javax.swing.JButton BtnEliminarVet;
+    public javax.swing.JButton BtnQuitarVet;
+    public javax.swing.JButton BtnReasignarArea;
     private javax.swing.JLabel LblTitulo;
     private javax.swing.JPanel PnlBotones;
     public javax.swing.JPanel PnlTblVet;

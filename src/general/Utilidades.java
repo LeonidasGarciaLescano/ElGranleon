@@ -4,88 +4,93 @@ import excepciones.ArregloVacio;
 import excepciones.ElementoNoEncontrado;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-import modelo.Animal;
-import modelo.ArregloAnimal;
-import modelo.ArregloVeterinario;
-import modelo.Veterinario;
+import modeloAnimal.Animal;
+import modeloAnimal.ArregloAnimal;
+import modeloControlMedico.ArregloControlMedico;
+import modeloHistoriaMedica.ArregloHistoriaMedica;
+import modeloMedicamento.ArregloMedicamento;
+import modeloVeterinario.ArregloVeterinario;
+import modeloControlMedico.ControlMedico;
+import modeloControlOperacion.ArregloControlOperacion;
+import modeloControlOperacion.ControlOperacion;
+import modeloHistoriaMedica.HistoriaMedica;
+import modeloMedicamento.Medicamento;
+import modeloSintoma.ArregloSintoma;
+import modeloSintoma.Sintoma;
+import modeloVeterinario.Veterinario;
 
 /**
  * @author Leonidas Garcia Lescano
  */
-
 public class Utilidades {
 
-    public static Object[][] generarDatosTablaVeterinarios(ArregloVeterinario[] arreglosVeterinarios) {
-        
-        int filas = 0;
-        
-        for (ArregloVeterinario arregloVet : arreglosVeterinarios) {
-            filas += arregloVet.obtenerArreglo().length;
-        }
-        
-        int columnas =  ArregloVeterinario.getCabecera().length;
-        
-        Object[][] data = new Object[filas][columnas];
-        
-        int i = 0;
-        for (ArregloVeterinario arregloVet : arreglosVeterinarios) {
-            for (Veterinario veterinario : arregloVet.obtenerArreglo()) {
-                data[i] = veterinario.obtenerDatosTabla();
-                i++;
+    public static void llenarTablaVerCtrlMed(JTable tablaCtrlMed) {
+
+        DefaultTableModel model = new DefaultTableModel(ArregloControlMedico.getColumnas(), 0);
+
+        if (Sistema.veterinarioSesion.getHistoriasMedicas().obtenerArreglo() != null) {
+            for (HistoriaMedica hist : Sistema.veterinarioSesion.getHistoriasMedicas().obtenerArreglo()) {
+                for (ControlMedico ctrlMed : hist.getControlesMedicos().obtenerArreglo()) {
+                    model.addRow(ctrlMed.obtenerDatosTabla());
+                }
             }
         }
-        
-        return data;
-        
+
+        tablaCtrlMed.setModel(model);
+
     }
-    
-    public static Object[][] generarDatosTablaAnimales(ArregloAnimal[] arreglosAnimales) {
-        
-        int filas = 0;
-        
-        for (ArregloAnimal arregloAni : arreglosAnimales) {
-            filas += arregloAni.obtenerArreglo().length;
-        }
-        
-        int columnas =  ArregloAnimal.getCabecera().length;
-        
-        Object[][] data = new Object[filas][columnas];
-        
-        int i = 0;
-        for (ArregloAnimal arregloAni : arreglosAnimales) {
-            for (Animal animal : arregloAni.obtenerArreglo()) {
-                data[i] = animal.obtenerDatosTabla();
-                i++;
+
+    public static void llenarTablaVerCtrlOpr(JTable tablaCtrlMed) {
+
+        DefaultTableModel model = new DefaultTableModel(ArregloControlOperacion.getColumnas(), 0);
+
+        if (Sistema.veterinarioSesion.getHistoriasMedicas().obtenerArreglo() != null) {
+            for (HistoriaMedica hist : Sistema.veterinarioSesion.getHistoriasMedicas().obtenerArreglo()) {
+                for (ControlOperacion ctrlOpr : hist.getControlesOperaciones().obtenerArreglo()) {
+                    model.addRow(ctrlOpr.obtenerDatosTabla());
+                }
             }
         }
-        
-        return data;
-        
+
+        tablaCtrlMed.setModel(model);
+
     }
-    
-    public static void llenarTabla(JTable tabla, String[] columnas, Object[][] data) {
-        
-        DefaultTableModel model = new DefaultTableModel(data, columnas);
-        
-        tabla.setModel(model);
-        
-    }
-    
-    public static Animal buscarAnimal(ArregloAnimal[] arreglosAnimales, String id) {
-        
-        Animal animalEncontrado = null;
-        
-        for (ArregloAnimal arregloAni : arreglosAnimales) {
-            
-            try {
-                animalEncontrado = arregloAni.buscarAnimal(id);
-            } catch (ElementoNoEncontrado | ArregloVacio e) {
-                System.out.println(e.getMessage());
-            }
-            
+
+    public static void llenarTablaAnimales(JTable tablaAnimales) {
+        DefaultTableModel model = new DefaultTableModel(ArregloAnimal.getCabecera(), 0);
+
+        for (Animal animal : Sistema.areaVeterinario.getAnimales().obtenerArreglo()) {
+            model.addRow(animal.obtenerDatosTabla());
         }
-        
-        return animalEncontrado;
+
+        tablaAnimales.setModel(model);
+
     }
-    
+
+    public static void llenarTablaMedicamentos(JTable tablaMedicamentos, ArregloMedicamento medicamentos) {
+        DefaultTableModel model = new DefaultTableModel(ArregloMedicamento.getColumnas(), 0);
+
+        if (medicamentos.obtenerArreglo() != null) {
+            for (Medicamento medicamento : medicamentos.obtenerArreglo()) {
+                model.addRow(medicamento.obtenerDatosTabla());
+            }
+        }
+
+        tablaMedicamentos.setModel(model);
+
+    }
+
+    public static void llenarTablaSintomas(JTable tablaSintomas, ArregloSintoma sintomas) {
+        DefaultTableModel model = new DefaultTableModel(ArregloSintoma.getColumnas(), 0);
+
+        if (sintomas.obtenerArreglo() != null) {
+            for (Sintoma sintoma : sintomas.obtenerArreglo()) {
+                model.addRow(sintoma.obtenerDatosTabla());
+            }
+        }
+
+        tablaSintomas.setModel(model);
+
+    }
+
 }
