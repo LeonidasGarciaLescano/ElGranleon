@@ -42,16 +42,16 @@ public class frmSelAnimalAreaCtrlOperacion extends javax.swing.JFrame {
         PnlTituloLayout.setHorizontalGroup(
             PnlTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlTituloLayout.createSequentialGroup()
-                .addGap(259, 259, 259)
+                .addGap(211, 211, 211)
                 .addComponent(LblTitulo)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PnlTituloLayout.setVerticalGroup(
             PnlTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlTituloLayout.createSequentialGroup()
-                .addContainerGap(25, Short.MAX_VALUE)
+                .addContainerGap(29, Short.MAX_VALUE)
                 .addComponent(LblTitulo)
-                .addGap(22, 22, 22))
+                .addGap(18, 18, 18))
         );
 
         TblAnimalesArea.setModel(new javax.swing.table.DefaultTableModel(

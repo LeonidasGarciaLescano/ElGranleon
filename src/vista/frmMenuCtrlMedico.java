@@ -5,6 +5,7 @@
 package vista;
 
 import java.awt.Color;
+import java.time.LocalTime;
 
 /**
  *
@@ -21,6 +22,21 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         setResizable(false);
         setSize(1000, 620);
+        setDate();
+    }
+    private void setDate(){
+        LocalTime currentTime = LocalTime.now();
+        String saludo;
+
+        if (currentTime.isBefore(LocalTime.NOON)) {
+            saludo = "¡Buenos días veterinario medico encargado!";
+        } else if (currentTime.isBefore(LocalTime.of(18, 0))) {
+            saludo = "¡Buenas tardes veterinario medico encargado!";
+        } else {
+            saludo = "¡Buenas noches veterinario medico encargado!";
+        }
+
+        LblSaludo.setText(saludo);
     }
 
     /**
@@ -73,7 +89,7 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
             PnlVerCtrlMedicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlVerCtrlMedicoLayout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(LblSaludo, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LblSaludo, javax.swing.GroupLayout.PREFERRED_SIZE, 867, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PnlVerCtrlMedicoLayout.setVerticalGroup(
@@ -90,6 +106,7 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
         PnlGenCrtlMed.setBackground(new Color(204, 255, 204));
         PnlGenCrtlMed.setLayout(new java.awt.GridBagLayout());
 
+        BtnGenCtrlMed.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         BtnGenCtrlMed.setText("General control médico");
         BtnGenCtrlMed.setPreferredSize(new java.awt.Dimension(700, 80));
         BtnGenCtrlMed.addActionListener(new java.awt.event.ActionListener() {
@@ -104,6 +121,7 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
         PnlVerCtrlMed.setBackground(new Color(204, 255, 204));
         PnlVerCtrlMed.setLayout(new java.awt.GridBagLayout());
 
+        BtnVerCtrlMed.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         BtnVerCtrlMed.setText("Visualizar controles médicos");
         BtnVerCtrlMed.setPreferredSize(new java.awt.Dimension(700, 80));
         PnlVerCtrlMed.add(BtnVerCtrlMed, new java.awt.GridBagConstraints());
@@ -113,6 +131,7 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
         PnlModCtrlMed.setBackground(new Color(204, 255, 204));
         PnlModCtrlMed.setLayout(new java.awt.GridBagLayout());
 
+        BtnModCtrlMed.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         BtnModCtrlMed.setText("Modificar controles médicos");
         BtnModCtrlMed.setPreferredSize(new java.awt.Dimension(700, 80));
         BtnModCtrlMed.addActionListener(new java.awt.event.ActionListener() {
@@ -127,6 +146,7 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
         PnlDelCtrlMed.setBackground(new Color(204, 255, 204));
         PnlDelCtrlMed.setLayout(new java.awt.GridBagLayout());
 
+        BtnDelCtrlMed.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
         BtnDelCtrlMed.setText("Eliminar control médico");
         BtnDelCtrlMed.setPreferredSize(new java.awt.Dimension(700, 80));
         PnlDelCtrlMed.add(BtnDelCtrlMed, new java.awt.GridBagConstraints());

@@ -7,7 +7,6 @@ import java.awt.event.MouseEvent;
 import modeloAnimal.Animal;
 import modeloAnimal.ArregloAnimal;
 import vista.frmSelAnimalAreaCtrlMedico;
-import vista.frmSelCtrlMedico;
 
 /**
  * @author Leonidas Garcia Lescano
