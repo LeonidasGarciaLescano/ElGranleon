@@ -222,7 +222,7 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
     public javax.swing.JButton BtnGenCtrlMed;
     public javax.swing.JButton BtnModCtrlMed;
     public javax.swing.JButton BtnVerCtrlMed;
-    private javax.swing.JLabel LblSaludo;
+    public javax.swing.JLabel LblSaludo;
     private javax.swing.JLabel LblTitulo;
     private javax.swing.JPanel PnlDelCtrlMed;
     private javax.swing.JPanel PnlGenCrtlMed;

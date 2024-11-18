@@ -22,21 +22,6 @@ public class frmMenuCtrlOperacion extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         setResizable(false);
         setSize(1000, 620);
-        setDate();
-    }
-    private void setDate(){
-        LocalTime currentTime = LocalTime.now();
-        String saludo;
-
-        if (currentTime.isBefore(LocalTime.NOON)) {
-            saludo = "¡Buenos días veterinario cirujano encargado!";
-        } else if (currentTime.isBefore(LocalTime.of(18, 0))) {
-            saludo = "¡Buenas tardes veterinario cirujano encargado!";
-        } else {
-            saludo = "¡Buenas noches veterinario cirujano encargado!";
-        }
-
-        LblSaludo.setText(saludo);
     }
 
     /**

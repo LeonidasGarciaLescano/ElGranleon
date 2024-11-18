@@ -1,8 +1,10 @@
 package controladorVetCir;
 
 import controladorVetZoo.ControladorVerModCtrlMedico;
+import general.Sistema;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalTime;
 import vista.frmMenuCtrlMedico;
 import vista.frmMenuCtrlOperacion;
 
@@ -15,6 +17,8 @@ public class ControladorMainMenu {
 
     public ControladorMainMenu() {
         vistaMenuCtrlOperacion = new frmMenuCtrlOperacion();
+
+        setSaludo(Sistema.veterinarioSesion.getNombres());
 
         vistaMenuCtrlOperacion.BtnVerCtrlOpr.addActionListener(new ActionListener() {
             @Override
@@ -60,6 +64,21 @@ public class ControladorMainMenu {
 
     public void run() {
         vistaMenuCtrlOperacion.setVisible(true);
+    }
+
+    private void setSaludo(String nombre) {
+        LocalTime currentTime = LocalTime.now();
+        String saludo;
+
+        if (currentTime.isBefore(LocalTime.NOON)) {
+            saludo = "¡Buenos días, " + nombre + "!";
+        } else if (currentTime.isBefore(LocalTime.of(18, 0))) {
+            saludo = "¡Buenas tardes, " + nombre + "!";
+        } else {
+            saludo = "¡Buenas noches, " + nombre + "!";
+        }
+
+        vistaMenuCtrlOperacion.LblSaludo.setText(saludo);
     }
 
 }

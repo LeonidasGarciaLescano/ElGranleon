@@ -45,16 +45,12 @@ public class ControladorInicioSesion {
                     Sistema.veterinarioSesion = vet;
                     Sistema.areaVeterinario = areaDeVet;
 
-                    
-                    
                     vistaInicioSesion.dispose();
-                    
+
                     if (vet instanceof VeterinarioCirujano) {
-                        JOptionPane.showMessageDialog(vistaInicioSesion, "Bienvenido, veterinario cirujano");
                         controladorVetCir.ControladorMainMenu ctrlMainCtrlOpr = new controladorVetCir.ControladorMainMenu();
                         ctrlMainCtrlOpr.run();
                     } else {
-                        JOptionPane.showMessageDialog(vistaInicioSesion, "Bienvenido, veterinario zoologico");
                         controladorVetZoo.ControladorMainMenu ctrlMainCtrlMed = new controladorVetZoo.ControladorMainMenu();
                         ctrlMainCtrlMed.run();
                     }
