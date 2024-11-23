@@ -9,13 +9,14 @@ import excepciones.ElementoNoEncontrado;
 import excepciones.IdDuplicado;
 import excepciones.LimiteAlcanzado;
 import general.Sistema;
+import java.io.Serializable;
 import java.util.Date;
 import modeloVeterinario.Veterinario;
 
 /**
  * @author Leonidas Garcia Lescano
  */
-public class HistoriaMedica {
+public class HistoriaMedica implements Serializable {
 
     private int id;
     private String nombreAnimal;
@@ -106,7 +107,7 @@ public class HistoriaMedica {
         }
 
     }
-    
+
     public int getId() {
         return id;
     }

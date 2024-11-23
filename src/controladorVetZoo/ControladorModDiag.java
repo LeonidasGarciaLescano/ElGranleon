@@ -1,6 +1,7 @@
 package controladorVetZoo;
 
 import general.Sistema;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Date;
@@ -70,31 +71,36 @@ public class ControladorModDiag {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                String descripcion = vistaModDiag.TxtAreaDescripcion.getText().trim();
-                String resultado = vistaModDiag.TxtResultado.getText().trim();
-                String estado = vistaModDiag.TxtAreaEstadoFisico.getText().trim();
-                Double temperaturaCorporal = Double.valueOf(vistaModDiag.TxtTemperatura.getText().trim());
-                Integer frecuenciaCardiaca = Integer.valueOf(vistaModDiag.TxtFrecuencia.getText().trim());
+                if (validarCampos()) {
+                    String descripcion = vistaModDiag.TxtAreaDescripcion.getText().trim();
+                    String resultado = vistaModDiag.TxtResultado.getText().trim();
+                    String estado = vistaModDiag.TxtAreaEstadoFisico.getText().trim();
+                    Double temperaturaCorporal = Double.valueOf(vistaModDiag.TxtTemperatura.getText().trim());
+                    Integer frecuenciaCardiaca = Integer.valueOf(vistaModDiag.TxtFrecuencia.getText().trim());
 
-                if (ctrlMedSel.getDiagnostico() != null) {
-                    ctrlMedSel.getDiagnostico().modificarDiagnostico(descripcion, resultado);
+                    if (ctrlMedSel.getDiagnostico() != null) {
+                        ctrlMedSel.getDiagnostico().modificarDiagnostico(descripcion, resultado);
 
-                    if (ctrlMedSel.getDiagnostico().getExamenFisico() != null) {
-                        ctrlMedSel.getDiagnostico().modificarExamenFisico(estado, temperaturaCorporal, frecuenciaCardiaca, new Date());
+                        if (ctrlMedSel.getDiagnostico().getExamenFisico() != null) {
+                            ctrlMedSel.getDiagnostico().modificarExamenFisico(estado, temperaturaCorporal, frecuenciaCardiaca, new Date());
+                        } else {
+                            ctrlMedSel.getDiagnostico().registrarExamenFisico(estado, temperaturaCorporal, frecuenciaCardiaca, new Date());
+                        }
+
+                        chbDiag.setSelected(true);
                     } else {
+                        ctrlMedSel.registrarDiagnostico(descripcion, resultado);
+
                         ctrlMedSel.getDiagnostico().registrarExamenFisico(estado, temperaturaCorporal, frecuenciaCardiaca, new Date());
+
+                        chbDiag.setSelected(true);
                     }
 
-                    chbDiag.setSelected(true);
+                    JOptionPane.showMessageDialog(vistaModDiag, "Diagnostico registrado");
                 } else {
-                    ctrlMedSel.registrarDiagnostico(descripcion, resultado);
-
-                    ctrlMedSel.getDiagnostico().registrarExamenFisico(estado, temperaturaCorporal, frecuenciaCardiaca, new Date());
-
-                    chbDiag.setSelected(true);
+                    JOptionPane.showMessageDialog(vistaModDiag, "Los datos ingresados no son validos");
+                    limpiarCampos();
                 }
-
-                JOptionPane.showMessageDialog(vistaModDiag, "Diagnostico registrado");
 
             }
         });
@@ -103,6 +109,68 @@ public class ControladorModDiag {
 
     public void run() {
         vistaModDiag.setVisible(true);
+    }
+
+    public boolean validarCampos() {
+        boolean esValido = true;
+
+        String descripcion = vistaModDiag.TxtAreaDescripcion.getText().trim();
+        String resultado = vistaModDiag.TxtResultado.getText().trim();
+        String estado = vistaModDiag.TxtAreaEstadoFisico.getText().trim();
+
+        if (descripcion.isEmpty()) {
+            vistaModDiag.TxtAreaDescripcion.setBackground(Color.RED);
+            esValido = false;
+        } else {
+            vistaModDiag.TxtAreaDescripcion.setBackground(Color.WHITE);
+        }
+
+        if (resultado.isEmpty()) {
+            vistaModDiag.TxtResultado.setBackground(Color.RED);
+            esValido = false;
+        } else {
+            vistaModDiag.TxtResultado.setBackground(Color.WHITE);
+        }
+
+        if (estado.isEmpty()) {
+            vistaModDiag.TxtAreaEstadoFisico.setBackground(Color.RED);
+            esValido = false;
+        } else {
+            vistaModDiag.TxtAreaEstadoFisico.setBackground(Color.WHITE);
+        }
+
+        String tempText = vistaModDiag.TxtTemperatura.getText().trim();
+        if (tempText.isEmpty() || !tempText.matches("^[0-9]*\\.?[0-9]+$")) {
+            vistaModDiag.TxtTemperatura.setBackground(Color.RED);
+            esValido = false;
+        } else {
+            vistaModDiag.TxtTemperatura.setBackground(Color.WHITE);
+        }
+
+        String frecuenciaText = vistaModDiag.TxtFrecuencia.getText().trim();
+        if (frecuenciaText.isEmpty() || !frecuenciaText.matches("^[0-9]+$")) {
+            vistaModDiag.TxtFrecuencia.setBackground(Color.RED);
+            esValido = false;
+        } else {
+            vistaModDiag.TxtFrecuencia.setBackground(Color.WHITE);
+        }
+
+        return esValido;
+    }
+
+    public void limpiarCampos() {
+
+        vistaModDiag.TxtAreaDescripcion.setText("");
+        vistaModDiag.TxtResultado.setText("");
+        vistaModDiag.TxtAreaEstadoFisico.setText("");
+        vistaModDiag.TxtTemperatura.setText("");
+        vistaModDiag.TxtFrecuencia.setText("");
+
+        vistaModDiag.TxtAreaDescripcion.setBackground(Color.WHITE);
+        vistaModDiag.TxtResultado.setBackground(Color.WHITE);
+        vistaModDiag.TxtAreaEstadoFisico.setBackground(Color.WHITE);
+        vistaModDiag.TxtTemperatura.setBackground(Color.WHITE);
+        vistaModDiag.TxtFrecuencia.setBackground(Color.WHITE);
     }
 
 }

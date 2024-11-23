@@ -7,12 +7,13 @@ import excepciones.ElementoNoEncontrado;
 import excepciones.IdDuplicado;
 import excepciones.LimiteAlcanzado;
 import general.Eliminadores;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * @author Leonidas Garcia Lescano
  */
-public class ArregloAnimal {
+public class ArregloAnimal implements Serializable {
 
     private int indice;
     private final Animal[] animales;

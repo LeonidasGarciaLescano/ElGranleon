@@ -23,11 +23,9 @@ import vista.frmRegCtrlMedico;
 public class ControladorRegCtrlMed {
 
     private frmRegCtrlMedico vistaRegCtrlMed;
-    private Animal animalSel;
 
     public ControladorRegCtrlMed(Animal animalSel) {
         vistaRegCtrlMed = new frmRegCtrlMedico();
-        this.animalSel = animalSel;
 
         vistaRegCtrlMed.TxtAnimal.setText(animalSel.getNombre());
 

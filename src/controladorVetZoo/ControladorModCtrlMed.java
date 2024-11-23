@@ -73,6 +73,8 @@ public class ControladorModCtrlMed {
 
                     Utilidades.llenarTablaVerCtrlMed(tablaControlesMedicos);
 
+                    JOptionPane.showMessageDialog(vistaModCtrlMedicos, "Control médico modificado con exito");
+                    
                     vistaModCtrlMedicos.dispose();
                 } else {
                     JOptionPane.showMessageDialog(vistaModCtrlMedicos, "Los datos ingresados no son validos");

@@ -5,12 +5,13 @@ import excepciones.ElementoNoEncontrado;
 import excepciones.IdDuplicado;
 import excepciones.LimiteAlcanzado;
 import general.Eliminadores;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * @author Leonidas Garcia Lescano
  */
-public class ArregloHistoriaMedica {
+public class ArregloHistoriaMedica implements Serializable {
 
     private int indice;
 

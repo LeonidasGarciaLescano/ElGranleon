@@ -1,12 +1,13 @@
 package modeloControlOperacion;
 
+import java.io.Serializable;
 import java.util.Date;
 import modeloVeterinario.Veterinario;
 
 /**
  * @author Leonidas Garcia Lescano
  */
-public class ControlOperacion {
+public class ControlOperacion implements Serializable {
 
     public static int id = 1;
     private int idCtrlOpr;

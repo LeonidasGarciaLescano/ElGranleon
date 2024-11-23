@@ -1,9 +1,11 @@
 package modeloInformeMedico;
 
+import java.io.Serializable;
+
 /**
  * @author Leonidas Garcia Lescano
  */
-public class InformeMedico {
+public class InformeMedico implements Serializable {
 
     private double peso, altura;
     private String observaciones;

@@ -86,7 +86,7 @@ public class frmMenuCtrlOperacion extends javax.swing.JFrame {
         PnlGenCrtlMed.setLayout(new java.awt.GridBagLayout());
 
         BtnGenCtrlOpr.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
-        BtnGenCtrlOpr.setText("General control de operación");
+        BtnGenCtrlOpr.setText("Generar control de operación");
         BtnGenCtrlOpr.setPreferredSize(new java.awt.Dimension(700, 80));
         BtnGenCtrlOpr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

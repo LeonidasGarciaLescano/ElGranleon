@@ -44,7 +44,6 @@ public class frmModReceta extends javax.swing.JFrame {
         TxtCantidad = new javax.swing.JTextField();
         BtnRegistrarMedicamento = new javax.swing.JToggleButton();
         PnlRegistrar = new javax.swing.JPanel();
-        BtnAñadirReceta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -173,24 +172,15 @@ public class frmModReceta extends javax.swing.JFrame {
                 .addComponent(BtnRegistrarMedicamento, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        BtnAñadirReceta.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        BtnAñadirReceta.setText("Añadir Receta");
-
         javax.swing.GroupLayout PnlRegistrarLayout = new javax.swing.GroupLayout(PnlRegistrar);
         PnlRegistrar.setLayout(PnlRegistrarLayout);
         PnlRegistrarLayout.setHorizontalGroup(
             PnlRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PnlRegistrarLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(BtnAñadirReceta, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(25, Short.MAX_VALUE))
+            .addGap(0, 700, Short.MAX_VALUE)
         );
         PnlRegistrarLayout.setVerticalGroup(
             PnlRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PnlRegistrarLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(BtnAñadirReceta, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+            .addGap(0, 80, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -258,7 +248,6 @@ public class frmModReceta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton BtnAñadirReceta;
     public javax.swing.JToggleButton BtnRegistrarMedicamento;
     private javax.swing.JLabel LblCantidad;
     private javax.swing.JLabel LblDias;

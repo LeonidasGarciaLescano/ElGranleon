@@ -6,12 +6,13 @@ import excepciones.ElementoNoEncontrado;
 import excepciones.IdDuplicado;
 import excepciones.LimiteAlcanzado;
 import general.Eliminadores;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * @author Leonidas Garcia Lescano
  */
-public class ArregloArea {
+public class ArregloArea implements Serializable {
 
     private int indice;
     private final Area[] areas;

@@ -14,12 +14,7 @@ import modeloVeterinario.VeterinarioZoologico;
  */
 public class Config {
 
-    public Config() {
-
-        Area areaFelina = new Area("Area Felina");
-        Area areaReptil = new Area("Area Reptil");
-        Area areaPrimate = new Area("Area Primate");
-
+    public static void cargarVeterinarios() {
         //VETERINARIOS POR DEFECTO
         Veterinario vet1 = new VeterinarioCirujano("VET-0001", "clave123", "Juan Pérez", "123456789", "juan@mail.com", "12345678", new Date());
         Veterinario vet2 = new VeterinarioCirujano("VET-0002", "clave456", "Ana Gómez", "234567891", "ana@mail.com", "23456789", new Date());
@@ -31,20 +26,28 @@ public class Config {
         Veterinario vet8 = new VeterinarioZoologico("VET-0008", "clave505", "Marta Díaz", "891234567", "marta@mail.com", "89012345", new Date());
         Veterinario vet9 = new VeterinarioZoologico("VET-0009", "clave606", "Esteban Romero", "912345678", "esteban@mail.com", "90123456", new Date());
 
-        //REGISTRO EN EL SISTEMA
-        try {
-            Sistema.veterinarios.registrarVeterinario(vet1);
-            Sistema.veterinarios.registrarVeterinario(vet2);
-            Sistema.veterinarios.registrarVeterinario(vet3);
-            Sistema.veterinarios.registrarVeterinario(vet4);
-            Sistema.veterinarios.registrarVeterinario(vet5);
-            Sistema.veterinarios.registrarVeterinario(vet6);
-            Sistema.veterinarios.registrarVeterinario(vet7);
-            Sistema.veterinarios.registrarVeterinario(vet8);
-            Sistema.veterinarios.registrarVeterinario(vet9);
-        } catch (IdDuplicado | LimiteAlcanzado e) {
-            System.out.println(e.getMessage());
-        }
+        Area areaFelina = Sistema.areas.obtenerArreglo()[0];
+        Area areaReptil = Sistema.areas.obtenerArreglo()[1];
+        Area areaPrimate = Sistema.areas.obtenerArreglo()[2];
+
+        //REGISTROS DE VETERINARIOS EN AREA FELINA
+        areaFelina.registrarVeterinario(vet1);
+        areaFelina.registrarVeterinario(vet2);
+        areaFelina.registrarVeterinario(vet3);
+
+        //REGISTROS DE VETERINARIOS EN AREA REPTIL
+        areaReptil.registrarVeterinario(vet4);
+        areaReptil.registrarVeterinario(vet5);
+        areaReptil.registrarVeterinario(vet6);
+
+        //REGISTROS DE VETERINARIOS EN AREA PRIMATE
+        areaPrimate.registrarVeterinario(vet7);
+        areaPrimate.registrarVeterinario(vet8);
+        areaPrimate.registrarVeterinario(vet9);
+
+    }
+
+    public static void cargarAnimales() {
 
         //ANIMALES POR DEFECTO
         //FELINOS
@@ -83,41 +86,9 @@ public class Config {
         Animal animal29 = new Animal("ANI-0029", "Tití Pigmeo", "Primate", "Mamífero", "Hembra", new Date());
         Animal animal30 = new Animal("ANI-0030", "Colobo", "Primate", "Mamífero", "Macho", new Date());
 
-        //REGISTROS EN HISTORIAS MEDICAS
-        int id = animal6.registrarControlMedico(vet4, animal6.getNombre());
-        animal6.getHistoriaMedica().buscarControlMedico(id).registrarInformeMedico(1, 1, "ninguna en especial");
-        id = animal6.registrarControlMedico(vet4, animal6.getNombre());
-        animal6.getHistoriaMedica().buscarControlMedico(id).registrarInformeMedico(1, 1, "ninguna en especial");
-        id = animal6.registrarControlMedico(vet4, animal6.getNombre());
-        animal6.getHistoriaMedica().buscarControlMedico(id).registrarInformeMedico(1, 1, "ninguna en especial");
-        id = animal6.registrarControlMedico(vet4, animal6.getNombre());
-        animal6.getHistoriaMedica().buscarControlMedico(id).registrarInformeMedico(1, 1, "ninguna en especial");
-
-        id = animal7.registrarControlMedico(vet4, animal7.getNombre());
-        animal7.getHistoriaMedica().buscarControlMedico(id).registrarInformeMedico(1, 1, "ninguna en especial");
-        id = animal7.registrarControlMedico(vet4, animal7.getNombre());
-        animal7.getHistoriaMedica().buscarControlMedico(id).registrarInformeMedico(1, 1, "ninguna en especial");
-        id = animal7.registrarControlMedico(vet4, animal7.getNombre());
-        animal7.getHistoriaMedica().buscarControlMedico(id).registrarInformeMedico(1, 1, "ninguna en especial");
-        id = animal7.registrarControlMedico(vet4, animal7.getNombre());
-        animal7.getHistoriaMedica().buscarControlMedico(id).registrarInformeMedico(1, 1, "ninguna en especial");
-
-        id = animal8.registrarControlMedico(vet4, animal8.getNombre());
-        animal8.getHistoriaMedica().buscarControlMedico(id).registrarInformeMedico(1, 1, "ninguna en especial");
-
-        id = animal8.registrarControlMedico(vet4, animal8.getNombre());
-        animal8.getHistoriaMedica().buscarControlMedico(id).registrarInformeMedico(1, 1, "ninguna en especial");
-
-        id = animal8.registrarControlMedico(vet4, animal8.getNombre());
-        animal8.getHistoriaMedica().buscarControlMedico(id).registrarInformeMedico(1, 1, "ninguna en especial");
-
-        id = animal8.registrarControlMedico(vet4, animal8.getNombre());
-        animal8.getHistoriaMedica().buscarControlMedico(id).registrarInformeMedico(1, 1, "ninguna en especial");
-
-        //HISTORIAS MEDICAS DE UN VETERINARIO
-        vet4.registrarHistoriaMedica(animal6.getHistoriaMedica());
-        vet4.registrarHistoriaMedica(animal7.getHistoriaMedica());
-        vet4.registrarHistoriaMedica(animal8.getHistoriaMedica());
+        Area areaFelina = Sistema.areas.obtenerArreglo()[0];
+        Area areaReptil = Sistema.areas.obtenerArreglo()[1];
+        Area areaPrimate = Sistema.areas.obtenerArreglo()[2];
 
         //REGISTROS DE ANIMALES  EN AREA FELINA
         areaFelina.registrarAnimal(animal1);
@@ -155,20 +126,12 @@ public class Config {
         areaPrimate.registrarAnimal(animal29);
         areaPrimate.registrarAnimal(animal30);
 
-        //REGISTROS DE VETERINARIOS EN AREA FELINA
-        areaFelina.registrarVeterinario(vet1);
-        areaFelina.registrarVeterinario(vet2);
-        areaFelina.registrarVeterinario(vet3);
+    }
 
-        //REGISTROS DE VETERINARIOS EN AREA REPTIL
-        areaReptil.registrarVeterinario(vet4);
-        areaReptil.registrarVeterinario(vet5);
-        areaReptil.registrarVeterinario(vet6);
-
-        //REGISTROS DE VETERINARIOS EN AREA PRIMATE
-        areaPrimate.registrarVeterinario(vet7);
-        areaPrimate.registrarVeterinario(vet8);
-        areaPrimate.registrarVeterinario(vet9);
+    public static void cargarAreas() {
+        Area areaFelina = new Area("Area Felina");
+        Area areaReptil = new Area("Area Reptil");
+        Area areaPrimate = new Area("Area Primate");
 
         //REGISTRO EN EL SISTEMA
         try {
@@ -181,7 +144,6 @@ public class Config {
         } catch (IdDuplicado | LimiteAlcanzado e) {
             System.out.println(e.getMessage());
         }
-
     }
 
 }

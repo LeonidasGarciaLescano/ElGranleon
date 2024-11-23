@@ -6,12 +6,13 @@ import excepciones.ArregloVacio;
 import excepciones.ElementoNoEncontrado;
 import excepciones.IdDuplicado;
 import excepciones.LimiteAlcanzado;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * @author Leonidas Garcia Lescano
  */
-public class Veterinario {
+public class Veterinario implements Serializable {
 
     protected ArregloHistoriaMedica historiasMedicas;
 

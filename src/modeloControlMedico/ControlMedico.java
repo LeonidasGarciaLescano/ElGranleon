@@ -1,5 +1,6 @@
 package modeloControlMedico;
 
+import java.io.Serializable;
 import modeloInformeMedico.InformeMedico;
 import modeloDiagnostico.Diagnostico;
 import java.util.Date;
@@ -8,7 +9,7 @@ import modeloVeterinario.Veterinario;
 /**
  * @author Leonidas Garcia Lescano
  */
-public class ControlMedico {
+public class ControlMedico implements Serializable {
 
     public static int id = 1;
     private int idCtrlMedico;

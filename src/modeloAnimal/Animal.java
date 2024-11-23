@@ -1,5 +1,6 @@
 package modeloAnimal;
 
+import java.io.Serializable;
 import java.util.Date;
 import modeloHistoriaMedica.HistoriaMedica;
 import modeloVeterinario.Veterinario;
@@ -7,7 +8,7 @@ import modeloVeterinario.Veterinario;
 /**
  * @author Leonidas Garcia Lescano
  */
-public class Animal {
+public class Animal implements Serializable {
 
     private String id, nombre, especie, clase, sexo;
     private Date fechaNacimiento;

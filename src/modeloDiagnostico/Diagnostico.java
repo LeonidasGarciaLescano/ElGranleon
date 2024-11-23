@@ -4,6 +4,7 @@ import excepciones.ArregloVacio;
 import excepciones.ElementoNoEncontrado;
 import excepciones.IdDuplicado;
 import excepciones.LimiteAlcanzado;
+import java.io.Serializable;
 import java.util.Date;
 import modeloMedicamento.ArregloMedicamento;
 import modeloSintoma.ArregloSintoma;
@@ -14,7 +15,7 @@ import modeloSintoma.Sintoma;
 /**
  * @author Leonidas Garcia Lescano
  */
-public class Diagnostico {
+public class Diagnostico implements Serializable {
     
     private String descripcion, resultado;
     ExamenFisico examenFisico;

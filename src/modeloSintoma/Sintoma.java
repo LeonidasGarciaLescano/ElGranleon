@@ -1,9 +1,11 @@
 package modeloSintoma;
 
+import java.io.Serializable;
+
 /**
  * @author Leonidas Garcia Lescano
  */
-public class Sintoma {
+public class Sintoma implements Serializable {
 
     private String nombre, gravedad;
 

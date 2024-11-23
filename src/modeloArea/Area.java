@@ -5,6 +5,7 @@ import excepciones.ArregloVacio;
 import excepciones.ElementoNoEncontrado;
 import excepciones.IdDuplicado;
 import excepciones.LimiteAlcanzado;
+import java.io.Serializable;
 import java.util.Date;
 import modeloAnimal.ArregloAnimal;
 import modeloVeterinario.ArregloVeterinario;
@@ -13,7 +14,7 @@ import modeloVeterinario.Veterinario;
 /**
  * @author Leonidas Garcia Lescano
  */
-public class Area {
+public class Area implements Serializable {
 
     private final String nombreArea;
     ArregloAnimal animales;

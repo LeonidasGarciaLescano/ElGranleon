@@ -1,10 +1,12 @@
 package modeloMedicamento;
 
+import java.io.Serializable;
+
 /**
  * @author Leonidas Garcia Lescano
  */
 
-public class Medicamento {
+public class Medicamento implements Serializable {
     private String nombre;
     private double cantidad;
     private int intervaloHora, dias;

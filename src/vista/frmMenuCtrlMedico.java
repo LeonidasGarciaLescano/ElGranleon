@@ -107,7 +107,7 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
         PnlGenCrtlMed.setLayout(new java.awt.GridBagLayout());
 
         BtnGenCtrlMed.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
-        BtnGenCtrlMed.setText("General control médico");
+        BtnGenCtrlMed.setText("Generar control médico");
         BtnGenCtrlMed.setPreferredSize(new java.awt.Dimension(700, 80));
         BtnGenCtrlMed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

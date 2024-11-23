@@ -66,7 +66,7 @@ public class ControladorRegCtrlOpr {
         String resultado = vistaCtrlOpr.TxtResultado.getText().trim();
         String descripcion = vistaCtrlOpr.TxtAreaDescripcion.getText().trim();
         Date fechaOperacion = vistaCtrlOpr.DateChFechaOperacion.getDate();
-        String anotaciones = vistaCtrlOpr.TxtAreaDescripcion.getText().trim();
+        String anotaciones = vistaCtrlOpr.TxtAreaAnotaciones.getText().trim();
 
         // Validar Nombre de Operación
         if (nombreOpr.isEmpty()) {

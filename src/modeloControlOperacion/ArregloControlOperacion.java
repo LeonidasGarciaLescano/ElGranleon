@@ -5,6 +5,7 @@ import excepciones.ElementoNoEncontrado;
 import excepciones.IdDuplicado;
 import excepciones.LimiteAlcanzado;
 import general.Eliminadores;
+import java.io.Serializable;
 import java.util.Date;
 import modeloControlMedico.ControlMedico;
 import modeloVeterinario.Veterinario;
@@ -12,7 +13,7 @@ import modeloVeterinario.Veterinario;
 /**
  * @author Leonidas Garcia Lescano
  */
-public class ArregloControlOperacion {
+public class ArregloControlOperacion implements Serializable {
 
     private int indice;
     private ControlOperacion[] controlesOperaciones;

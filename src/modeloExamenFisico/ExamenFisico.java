@@ -1,12 +1,13 @@
 package modeloExamenFisico;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * @author Leonidas Garcia Lescano
  */
 
-public class ExamenFisico {
+public class ExamenFisico implements Serializable {
     private String estado;
     private double temperaturaCorporal;
     private int frecuenciaCardiaca;

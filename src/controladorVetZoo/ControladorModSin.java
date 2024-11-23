@@ -2,6 +2,7 @@ package controladorVetZoo;
 
 import general.Sistema;
 import general.Utilidades;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JCheckBox;
@@ -26,15 +27,23 @@ public class ControladorModSin {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                String nombreSintoma = vistaModSintomas.TxtNombreSintoma.getText().trim();
-                String gravedad = vistaModSintomas.TxtGravedad.getText().trim();
+                if (validarCamposSintomas()) {
+                    String nombreSintoma = vistaModSintomas.TxtNombreSintoma.getText().trim();
+                    String gravedad = vistaModSintomas.TxtGravedad.getText().trim();
 
-                ctrlMedSel.getDiagnostico().registrarSintoma(nombreSintoma, gravedad);
+                    ctrlMedSel.getDiagnostico().registrarSintoma(nombreSintoma, gravedad);
 
-                chbSin1.setSelected(true);
-                chbSin2.setSelected(true);
+                    chbSin1.setSelected(true);
+                    chbSin2.setSelected(true);
 
-                Utilidades.llenarTablaSintomas(vistaModSintomas.TblSintoma, ctrlMedSel.getDiagnostico().getSintomas());
+                    vistaModSintomas.TxtNombreSintoma.setText("");
+                    vistaModSintomas.TxtGravedad.setText("");
+
+                    Utilidades.llenarTablaSintomas(vistaModSintomas.TblSintoma, ctrlMedSel.getDiagnostico().getSintomas());
+                } else {
+                    JOptionPane.showMessageDialog(vistaModSintomas, "Los datos ingresados no son validos");
+                    limpiarCamposSintomas();
+                }
 
             }
         });
@@ -69,6 +78,37 @@ public class ControladorModSin {
 
     public void run() {
         vistaModSintomas.setVisible(true);
+    }
+
+    public boolean validarCamposSintomas() {
+        boolean esValido = true;
+
+        String nombreSintoma = vistaModSintomas.TxtNombreSintoma.getText().trim();
+        if (nombreSintoma.isEmpty()) {
+            vistaModSintomas.TxtNombreSintoma.setBackground(Color.RED);
+            esValido = false;
+        } else {
+            vistaModSintomas.TxtNombreSintoma.setBackground(Color.WHITE);
+        }
+
+        String gravedad = vistaModSintomas.TxtGravedad.getText().trim();
+        if (gravedad.isEmpty()) {
+            vistaModSintomas.TxtGravedad.setBackground(Color.RED);
+            esValido = false;
+        } else {
+            vistaModSintomas.TxtGravedad.setBackground(Color.WHITE);
+        }
+
+        return esValido;
+    }
+
+    public void limpiarCamposSintomas() {
+
+        vistaModSintomas.TxtNombreSintoma.setText("");
+        vistaModSintomas.TxtGravedad.setText("");
+
+        vistaModSintomas.TxtNombreSintoma.setBackground(Color.WHITE);
+        vistaModSintomas.TxtGravedad.setBackground(Color.WHITE);
     }
 
 }

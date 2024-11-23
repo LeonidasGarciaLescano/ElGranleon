@@ -5,11 +5,12 @@ import excepciones.ElementoNoEncontrado;
 import excepciones.IdDuplicado;
 import excepciones.LimiteAlcanzado;
 import general.Eliminadores;
+import java.io.Serializable;
 
 /**
  * @author Leonidas Garcia Lescano
  */
-public class ArregloSintoma {
+public class ArregloSintoma implements Serializable {
 
     private int indice;
     private final Sintoma[] sintomas;
