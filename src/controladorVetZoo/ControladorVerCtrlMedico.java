@@ -1,5 +1,6 @@
 package controladorVetZoo;
 
+import estilos.Fuente;
 import general.Sistema;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,7 +18,8 @@ public class ControladorVerCtrlMedico {
 
     public ControladorVerCtrlMedico(ControlMedico ctrlMedSel) {
         vistaCtrlMedico = new frmVerCtrlMedico();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaCtrlMedico.getContentPane());
         System.out.println(ctrlMedSel);
         
         vistaCtrlMedico.TxtNombreAnimal.setText(ctrlMedSel.getNombreAnimal());

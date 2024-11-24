@@ -4,6 +4,8 @@
  */
 package vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author USUARIO
@@ -15,6 +17,7 @@ public class frmSelCtrlOperacion extends javax.swing.JFrame {
      */
     public frmSelCtrlOperacion() {
         initComponents();
+        getContentPane().setBackground(new Color(241, 246, 190));
     }
 
     /**
@@ -34,7 +37,10 @@ public class frmSelCtrlOperacion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        PnlTitulo.setBackground(new java.awt.Color(241, 246, 179));
+
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        LblTitulo.setForeground(new java.awt.Color(114, 187, 83));
         LblTitulo.setText("Controles de operaciones registrados");
 
         javax.swing.GroupLayout PnlTituloLayout = new javax.swing.GroupLayout(PnlTitulo);
@@ -54,6 +60,8 @@ public class frmSelCtrlOperacion extends javax.swing.JFrame {
                 .addGap(19, 19, 19))
         );
 
+        PnlTabla.setBackground(new java.awt.Color(241, 246, 179));
+
         TblControlOperaciones.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -71,16 +79,17 @@ public class frmSelCtrlOperacion extends javax.swing.JFrame {
         PnlTabla.setLayout(PnlTablaLayout);
         PnlTablaLayout.setHorizontalGroup(
             PnlTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PnlTablaLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlTablaLayout.createSequentialGroup()
+                .addContainerGap(20, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 965, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addGap(15, 15, 15))
         );
         PnlTablaLayout.setVerticalGroup(
             PnlTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PnlTablaLayout.createSequentialGroup()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlTablaLayout.createSequentialGroup()
+                .addContainerGap(25, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -94,9 +103,8 @@ public class frmSelCtrlOperacion extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(PnlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addComponent(PnlTabla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PnlTabla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();

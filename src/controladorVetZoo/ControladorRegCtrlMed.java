@@ -1,5 +1,6 @@
 package controladorVetZoo;
 
+import estilos.Fuente;
 import general.Sistema;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -26,7 +27,9 @@ public class ControladorRegCtrlMed {
 
     public ControladorRegCtrlMed(Animal animalSel) {
         vistaRegCtrlMed = new frmRegCtrlMedico();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaRegCtrlMed.getContentPane());
+        
         vistaRegCtrlMed.TxtAnimal.setText(animalSel.getNombre());
 
         vistaRegCtrlMed.BtnAñadirDiagnostico.addActionListener(new ActionListener() {

@@ -4,6 +4,8 @@
  */
 package vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author Nick Emanuel Salcedo Alfaro
@@ -15,6 +17,7 @@ public class frmRegDiagnostico extends javax.swing.JFrame {
      */
     public frmRegDiagnostico() {
         initComponents();
+        getContentPane().setBackground(new Color(114, 187, 83));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         ChbReceta.setEnabled(false);
         ChbSintoma.setEnabled(false);
@@ -59,9 +62,11 @@ public class frmRegDiagnostico extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        PnlTitulo.setBackground(new java.awt.Color(241, 246, 190));
         PnlTitulo.setPreferredSize(new java.awt.Dimension(704, 100));
 
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        LblTitulo.setForeground(new java.awt.Color(114, 187, 83));
         LblTitulo.setText("Registrar Diagnostico");
 
         javax.swing.GroupLayout PnlTituloLayout = new javax.swing.GroupLayout(PnlTitulo);
@@ -81,7 +86,10 @@ public class frmRegDiagnostico extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
+        PnlDiagnostico.setBackground(new java.awt.Color(241, 246, 190));
+
         LblDiagnostico.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        LblDiagnostico.setForeground(new java.awt.Color(114, 187, 83));
         LblDiagnostico.setText("Diagnostico:");
 
         LblDescripcion.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
@@ -89,20 +97,31 @@ public class frmRegDiagnostico extends javax.swing.JFrame {
 
         TxtAreaDescripcion.setColumns(20);
         TxtAreaDescripcion.setRows(5);
+        TxtAreaDescripcion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jScrollPane1.setViewportView(TxtAreaDescripcion);
 
         LblResultado.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         LblResultado.setText("Resultado:");
 
+        TxtResultado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        BtnAddSintoma.setBackground(new java.awt.Color(93, 109, 126));
         BtnAddSintoma.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        BtnAddSintoma.setForeground(new java.awt.Color(255, 255, 255));
+        BtnAddSintoma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estilos/static/icon_add.png"))); // NOI18N
         BtnAddSintoma.setText("Añadir Sintomas");
 
+        BtnAddReceta.setBackground(new java.awt.Color(93, 109, 126));
         BtnAddReceta.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        BtnAddReceta.setForeground(new java.awt.Color(255, 255, 255));
+        BtnAddReceta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estilos/static/icon_add.png"))); // NOI18N
         BtnAddReceta.setText("Añadir Receta");
 
+        ChbSintoma.setBackground(new java.awt.Color(241, 246, 190));
         ChbSintoma.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         ChbSintoma.setText("Sintomas");
 
+        ChbReceta.setBackground(new java.awt.Color(241, 246, 190));
         ChbReceta.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         ChbReceta.setText("Receta");
         ChbReceta.addActionListener(new java.awt.event.ActionListener() {
@@ -116,11 +135,11 @@ public class frmRegDiagnostico extends javax.swing.JFrame {
         PnlDiagnosticoLayout.setHorizontalGroup(
             PnlDiagnosticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlDiagnosticoLayout.createSequentialGroup()
-                .addGap(62, 62, 62)
+                .addGap(64, 64, 64)
                 .addComponent(ChbSintoma)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ChbReceta)
-                .addGap(70, 70, 70))
+                .addGap(65, 65, 65))
             .addGroup(PnlDiagnosticoLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(PnlDiagnosticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -143,54 +162,58 @@ public class frmRegDiagnostico extends javax.swing.JFrame {
                 .addComponent(LblDiagnostico)
                 .addGap(15, 15, 15)
                 .addComponent(LblDescripcion)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(PnlDiagnosticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PnlDiagnosticoLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(PnlDiagnosticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PnlDiagnosticoLayout.createSequentialGroup()
-                                .addGap(15, 15, 15)
-                                .addComponent(TxtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(PnlDiagnosticoLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(LblResultado)
-                                .addGap(18, 18, 18)))
-                        .addComponent(BtnAddSintoma)
-                        .addGap(26, 26, 26)
-                        .addComponent(BtnAddReceta)
-                        .addGap(77, 77, 77))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlDiagnosticoLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(TxtResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PnlDiagnosticoLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(PnlDiagnosticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ChbReceta)
-                            .addComponent(ChbSintoma))
-                        .addGap(15, 15, 15))))
+                        .addComponent(LblResultado)
+                        .addGap(26, 26, 26)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BtnAddSintoma)
+                .addGap(18, 18, 18)
+                .addComponent(BtnAddReceta)
+                .addGap(18, 18, 18)
+                .addGroup(PnlDiagnosticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ChbReceta)
+                    .addComponent(ChbSintoma))
+                .addGap(26, 26, 26))
         );
 
+        PnlRegistrar.setBackground(new java.awt.Color(241, 246, 190));
         PnlRegistrar.setPreferredSize(new java.awt.Dimension(838, 80));
 
+        BtnRegistrar.setBackground(new java.awt.Color(25, 111, 61));
         BtnRegistrar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        BtnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
+        BtnRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estilos/static/icon_assingment.png"))); // NOI18N
         BtnRegistrar.setText("Registrar diagnóstico");
 
         javax.swing.GroupLayout PnlRegistrarLayout = new javax.swing.GroupLayout(PnlRegistrar);
         PnlRegistrar.setLayout(PnlRegistrarLayout);
         PnlRegistrarLayout.setHorizontalGroup(
             PnlRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PnlRegistrarLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlRegistrarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(BtnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(19, 19, 19))
         );
         PnlRegistrarLayout.setVerticalGroup(
             PnlRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlRegistrarLayout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+            .addGroup(PnlRegistrarLayout.createSequentialGroup()
+                .addGap(15, 15, 15)
                 .addComponent(BtnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
+        PnlExamenFisico.setBackground(new java.awt.Color(241, 246, 190));
+
         LblExamenFisico.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        LblExamenFisico.setForeground(new java.awt.Color(114, 187, 83));
         LblExamenFisico.setText("Examen Fisico:");
 
         LblFrecuencia.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
@@ -198,6 +221,7 @@ public class frmRegDiagnostico extends javax.swing.JFrame {
 
         TxtAreaEstadoFisico.setColumns(20);
         TxtAreaEstadoFisico.setRows(5);
+        TxtAreaEstadoFisico.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jScrollPane2.setViewportView(TxtAreaEstadoFisico);
 
         LblEstadoFisico.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
@@ -206,12 +230,14 @@ public class frmRegDiagnostico extends javax.swing.JFrame {
         LblTemperatura.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         LblTemperatura.setText("Temperatura corporal:");
 
+        TxtFrecuencia.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         TxtFrecuencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtFrecuenciaActionPerformed(evt);
             }
         });
 
+        TxtTemperatura.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         TxtTemperatura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtTemperaturaActionPerformed(evt);
@@ -232,7 +258,7 @@ public class frmRegDiagnostico extends javax.swing.JFrame {
                             .addComponent(LblTemperatura)
                             .addComponent(LblEstadoFisico)
                             .addComponent(LblFrecuencia))
-                        .addGap(0, 91, Short.MAX_VALUE))
+                        .addGap(0, 97, Short.MAX_VALUE))
                     .addComponent(TxtFrecuencia)
                     .addComponent(TxtTemperatura))
                 .addContainerGap())
@@ -244,17 +270,17 @@ public class frmRegDiagnostico extends javax.swing.JFrame {
                 .addComponent(LblExamenFisico)
                 .addGap(18, 18, 18)
                 .addComponent(LblEstadoFisico)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(LblTemperatura)
                 .addGap(18, 18, 18)
                 .addComponent(TxtTemperatura, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(LblFrecuencia)
                 .addGap(18, 18, 18)
                 .addComponent(TxtFrecuencia, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
+                .addGap(23, 23, 23))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -262,28 +288,23 @@ public class frmRegDiagnostico extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PnlTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, 850, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(PnlDiagnostico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(PnlExamenFisico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(PnlRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(PnlDiagnostico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PnlExamenFisico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(PnlRegistrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 850, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(PnlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(PnlExamenFisico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(PnlDiagnostico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(PnlDiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(PnlRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(0, 0, 0))
         );
 
         pack();

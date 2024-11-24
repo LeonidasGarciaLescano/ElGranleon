@@ -1,5 +1,6 @@
 package controladorVetZoo;
 
+import estilos.Fuente;
 import general.Sistema;
 import general.Utilidades;
 import java.awt.Color;
@@ -20,7 +21,8 @@ public class ControladorModSin {
     public ControladorModSin(ControlMedico ctrlMedSel, JCheckBox chbSin1, JCheckBox chbSin2) {
 
         vistaModSintomas = new frmModSintomas();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaModSintomas.getContentPane());
         Utilidades.llenarTablaSintomas(vistaModSintomas.TblSintoma, ctrlMedSel.getDiagnostico().getSintomas());
 
         vistaModSintomas.BtnRegistrarSintoma.addActionListener(new ActionListener() {

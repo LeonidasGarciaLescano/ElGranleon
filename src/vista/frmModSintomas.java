@@ -4,6 +4,8 @@
  */
 package vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author Nick Emanuel Salcedo Alfaro
@@ -15,6 +17,7 @@ public class frmModSintomas extends javax.swing.JFrame {
      */
     public frmModSintomas() {
         initComponents();
+        getContentPane().setBackground(new Color(114, 187, 83));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
@@ -39,11 +42,13 @@ public class frmModSintomas extends javax.swing.JFrame {
         PnlTabla = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TblSintoma = new javax.swing.JTable();
-        PnlRegistrar = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        PnlTitulo.setBackground(new java.awt.Color(241, 246, 190));
+
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        LblTitulo.setForeground(new java.awt.Color(114, 187, 83));
         LblTitulo.setText("Registrar Sintomas");
 
         javax.swing.GroupLayout PnlTituloLayout = new javax.swing.GroupLayout(PnlTitulo);
@@ -63,22 +68,31 @@ public class frmModSintomas extends javax.swing.JFrame {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
+        PnlSintoma.setBackground(new java.awt.Color(241, 246, 190));
+
         LblNuevoSintoma.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        LblNuevoSintoma.setForeground(new java.awt.Color(114, 187, 83));
         LblNuevoSintoma.setText("Nuevo Sintoma:");
 
         LblNombreSintoma.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         LblNombreSintoma.setText("Nombre del Sintoma:");
 
+        TxtNombreSintoma.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         TxtNombreSintoma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtNombreSintomaActionPerformed(evt);
             }
         });
 
+        TxtGravedad.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
         LblGravedad.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         LblGravedad.setText("Gravedad:");
 
+        BtnRegistrarSintoma.setBackground(new java.awt.Color(93, 109, 126));
         BtnRegistrarSintoma.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        BtnRegistrarSintoma.setForeground(new java.awt.Color(255, 255, 255));
+        BtnRegistrarSintoma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estilos/static/icon_pill.png"))); // NOI18N
         BtnRegistrarSintoma.setText("Registrar Sintoma");
         BtnRegistrarSintoma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -124,10 +138,12 @@ public class frmModSintomas extends javax.swing.JFrame {
                 .addGroup(PnlSintomaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(TxtGravedad, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LblGravedad, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
-                .addComponent(BtnRegistrarSintoma, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addComponent(BtnRegistrarSintoma, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
+        PnlTabla.setBackground(new java.awt.Color(241, 246, 190));
         PnlTabla.setPreferredSize(new java.awt.Dimension(700, 210));
 
         TblSintoma.setModel(new javax.swing.table.DefaultTableModel(
@@ -156,19 +172,8 @@ public class frmModSintomas extends javax.swing.JFrame {
             PnlTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlTablaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        javax.swing.GroupLayout PnlRegistrarLayout = new javax.swing.GroupLayout(PnlRegistrar);
-        PnlRegistrar.setLayout(PnlRegistrarLayout);
-        PnlRegistrarLayout.setHorizontalGroup(
-            PnlRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
-        );
-        PnlRegistrarLayout.setVerticalGroup(
-            PnlRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -178,7 +183,6 @@ public class frmModSintomas extends javax.swing.JFrame {
             .addComponent(PnlTabla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(PnlSintoma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(PnlTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(PnlRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,9 +191,7 @@ public class frmModSintomas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PnlSintoma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PnlTabla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(PnlRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(PnlTabla, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE))
         );
 
         pack();
@@ -247,7 +249,6 @@ public class frmModSintomas extends javax.swing.JFrame {
     private javax.swing.JLabel LblNombreSintoma;
     private javax.swing.JLabel LblNuevoSintoma;
     private javax.swing.JLabel LblTitulo;
-    private javax.swing.JPanel PnlRegistrar;
     private javax.swing.JPanel PnlSintoma;
     private javax.swing.JPanel PnlTabla;
     private javax.swing.JPanel PnlTitulo;

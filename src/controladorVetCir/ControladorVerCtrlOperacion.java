@@ -1,5 +1,6 @@
 package controladorVetCir;
 
+import estilos.Fuente;
 import modeloControlOperacion.ControlOperacion;
 import vista.frmVerCtrlOperacion;
 
@@ -13,7 +14,9 @@ public class ControladorVerCtrlOperacion {
     public ControladorVerCtrlOperacion(ControlOperacion ctrlOprSel) {
 
         vistaCtrlOpr = new frmVerCtrlOperacion();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaCtrlOpr.getContentPane());
+        
         vistaCtrlOpr.TxtResultado.setText(ctrlOprSel.getResultado());
         vistaCtrlOpr.TADescripcion.setText(ctrlOprSel.getDescripcion());
         vistaCtrlOpr.TxtVeterinario.setText(ctrlOprSel.getVeterinario().getNombres());

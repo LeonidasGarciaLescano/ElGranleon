@@ -4,6 +4,8 @@
  */
 package vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author USUARIO
@@ -15,6 +17,7 @@ public class frmElimCtrlOperacion extends javax.swing.JFrame {
      */
     public frmElimCtrlOperacion() {
         initComponents();
+        getContentPane().setBackground(new Color(241, 246, 190));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
@@ -35,7 +38,10 @@ public class frmElimCtrlOperacion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        PnlTitulo.setBackground(new java.awt.Color(241, 246, 179));
+
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        LblTitulo.setForeground(new java.awt.Color(114, 187, 83));
         LblTitulo.setText("Eliminar controles de operaciones");
 
         javax.swing.GroupLayout PnlTituloLayout = new javax.swing.GroupLayout(PnlTitulo);
@@ -52,8 +58,10 @@ public class frmElimCtrlOperacion extends javax.swing.JFrame {
             .addGroup(PnlTituloLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(LblTitulo)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
+
+        PnlTabla.setBackground(new java.awt.Color(241, 246, 179));
 
         TblControlOperacion.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -79,7 +87,9 @@ public class frmElimCtrlOperacion extends javax.swing.JFrame {
         );
         PnlTablaLayout.setVerticalGroup(
             PnlTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 472, Short.MAX_VALUE)
+            .addGroup(PnlTablaLayout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 32, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -93,9 +103,8 @@ public class frmElimCtrlOperacion extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(PnlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(PnlTabla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PnlTabla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

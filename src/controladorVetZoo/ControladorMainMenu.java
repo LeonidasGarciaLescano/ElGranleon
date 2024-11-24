@@ -1,5 +1,6 @@
 package controladorVetZoo;
 
+import estilos.Fuente;
 import general.Sistema;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,10 +20,11 @@ import vista.frmMenuCtrlMedico;
 public class ControladorMainMenu {
 
     private frmMenuCtrlMedico vistaMenuCtrlMed;
-
+    
     public ControladorMainMenu() {
         vistaMenuCtrlMed = new frmMenuCtrlMedico();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaMenuCtrlMed.getContentPane());
         setSaludo(Sistema.veterinarioSesion.getNombres());
 
         vistaMenuCtrlMed.BtnVerCtrlMed.addActionListener(new ActionListener() {

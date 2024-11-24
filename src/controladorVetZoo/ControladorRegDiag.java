@@ -1,5 +1,6 @@
 package controladorVetZoo;
 
+import estilos.Fuente;
 import general.Sistema;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -20,7 +21,9 @@ public class ControladorRegDiag {
 
     public ControladorRegDiag(JCheckBox chbDiag, JCheckBox chbSin, JCheckBox chbRec) {
         vistaRegDiag = new frmRegDiagnostico();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaRegDiag.getContentPane());
+        
         if (Sistema.nuevoDiagnostico != null) {
 
             vistaRegDiag.TxtAreaDescripcion.setText(Sistema.nuevoDiagnostico.getDescripcion());

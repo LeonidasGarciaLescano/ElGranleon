@@ -4,6 +4,8 @@
  */
 package vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author Nick Emanuel Salcedo Alfaro
@@ -15,6 +17,7 @@ public class frmRegCtrlOperacion extends javax.swing.JFrame {
      */
     public frmRegCtrlOperacion() {
         initComponents();
+        getContentPane().setBackground(new Color(114, 187, 83));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
@@ -51,9 +54,11 @@ public class frmRegCtrlOperacion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        PnlRegistrarControlOperacion.setBackground(new java.awt.Color(241, 246, 190));
         PnlRegistrarControlOperacion.setPreferredSize(new java.awt.Dimension(1000, 100));
 
         LblRegistrar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        LblRegistrar.setForeground(new java.awt.Color(114, 187, 83));
         LblRegistrar.setText("Registrar control de operacion");
 
         javax.swing.GroupLayout PnlRegistrarControlOperacionLayout = new javax.swing.GroupLayout(PnlRegistrarControlOperacion);
@@ -73,7 +78,10 @@ public class frmRegCtrlOperacion extends javax.swing.JFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
+        PnlInformeMedicoLeft.setBackground(new java.awt.Color(241, 246, 190));
+
         LblInformeMedico.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        LblInformeMedico.setForeground(new java.awt.Color(114, 187, 83));
         LblInformeMedico.setText("Informe medico:");
 
         LblNombreOperacion.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
@@ -87,7 +95,14 @@ public class frmRegCtrlOperacion extends javax.swing.JFrame {
 
         TxtAreaDescripcion.setColumns(20);
         TxtAreaDescripcion.setRows(5);
+        TxtAreaDescripcion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jScrollPane1.setViewportView(TxtAreaDescripcion);
+
+        TxtAnimal.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        TxtNombreOperacion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        TxtResultado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         LblAnimal.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         LblAnimal.setText("Animal:");
@@ -147,7 +162,12 @@ public class frmRegCtrlOperacion extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        PnlRegistrar.setBackground(new java.awt.Color(241, 246, 190));
+
+        BtnRegistrar.setBackground(new java.awt.Color(25, 111, 61));
         BtnRegistrar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        BtnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
+        BtnRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estilos/static/icon_assingment.png"))); // NOI18N
         BtnRegistrar.setText("Registrar");
         BtnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,6 +192,8 @@ public class frmRegCtrlOperacion extends javax.swing.JFrame {
                 .addGap(14, 14, 14))
         );
 
+        PnlInformeMedicoRight.setBackground(new java.awt.Color(241, 246, 190));
+
         LblAnotaciones.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         LblAnotaciones.setText("Anotaciones:");
 
@@ -180,6 +202,7 @@ public class frmRegCtrlOperacion extends javax.swing.JFrame {
 
         TxtAreaAnotaciones.setColumns(20);
         TxtAreaAnotaciones.setRows(5);
+        TxtAreaAnotaciones.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jScrollPane2.setViewportView(TxtAreaAnotaciones);
 
         javax.swing.GroupLayout PnlInformeMedicoRightLayout = new javax.swing.GroupLayout(PnlInformeMedicoRight);

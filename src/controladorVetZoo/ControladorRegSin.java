@@ -1,5 +1,6 @@
 package controladorVetZoo;
 
+import estilos.Fuente;
 import general.Sistema;
 import general.Utilidades;
 import java.awt.Color;
@@ -21,7 +22,8 @@ public class ControladorRegSin {
     public ControladorRegSin(JCheckBox chbSin1, JCheckBox chbSin2) {
 
         vistaRegSin = new frmRegSintomas();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaRegSin.getContentPane());
         Utilidades.llenarTablaSintomas(vistaRegSin.TblSintoma, Sistema.nuevoDiagnostico.getSintomas());
 
         vistaRegSin.BtnRegistrarSintoma.addActionListener(new ActionListener() {

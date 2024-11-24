@@ -1,6 +1,7 @@
 package controladorVetCir;
 
 import controladorVetZoo.ControladorVerModCtrlMedico;
+import estilos.Fuente;
 import general.Sistema;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,9 +21,10 @@ public class ControladorMainMenu {
 
     public ControladorMainMenu() {
         vistaMenuCtrlOperacion = new frmMenuCtrlOperacion();
-
         setSaludo(Sistema.veterinarioSesion.getNombres());
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaMenuCtrlOperacion.getContentPane());
+        
         vistaMenuCtrlOperacion.BtnVerCtrlOpr.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

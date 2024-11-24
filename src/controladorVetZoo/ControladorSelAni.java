@@ -1,5 +1,6 @@
 package controladorVetZoo;
 
+import estilos.Fuente;
 import general.Sistema;
 import general.Utilidades;
 import java.awt.event.MouseAdapter;
@@ -17,7 +18,8 @@ public class ControladorSelAni {
     
     public ControladorSelAni() {
         vistaSelAnimal = new frmSelAnimalAreaCtrlMedico();
-        
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaSelAnimal.getContentPane());
         vistaSelAnimal.LblTitulo.setText("Animales de " + Sistema.areaVeterinario.getNombreArea());
         
         Utilidades.llenarTablaAnimales(vistaSelAnimal.TblAnimalesArea);

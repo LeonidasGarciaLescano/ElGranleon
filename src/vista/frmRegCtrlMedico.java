@@ -4,6 +4,8 @@
  */
 package vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author Nick Emanuel Salcedo Alfaro
@@ -15,6 +17,7 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
      */
     public frmRegCtrlMedico() {
         initComponents();
+        getContentPane().setBackground(new Color(114, 187, 83));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         ChbDiagnostico.setEnabled(false);
         ChbReceta.setEnabled(false);
@@ -54,7 +57,10 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1000, 620));
 
+        PnlTitulo.setBackground(new java.awt.Color(241, 246, 190));
+
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        LblTitulo.setForeground(new java.awt.Color(114, 187, 83));
         LblTitulo.setText("Registrar Control Medico");
 
         javax.swing.GroupLayout PnlTituloLayout = new javax.swing.GroupLayout(PnlTitulo);
@@ -74,7 +80,10 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
+        PnlInfMedico.setBackground(new java.awt.Color(241, 246, 190));
+
         LblInformeMedico.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); // NOI18N
+        LblInformeMedico.setForeground(new java.awt.Color(114, 187, 83));
         LblInformeMedico.setText("Informe Medico:");
 
         LblTalla.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
@@ -89,18 +98,21 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
         LblAnimal.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         LblAnimal.setText("Animal:");
 
+        TxtTalla.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         TxtTalla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtTallaActionPerformed(evt);
             }
         });
 
+        TxtAnimal.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         TxtAnimal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtAnimalActionPerformed(evt);
             }
         });
 
+        TxtPeso.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         TxtPeso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtPesoActionPerformed(evt);
@@ -109,6 +121,7 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
 
         TxtAreaObservaciones.setColumns(20);
         TxtAreaObservaciones.setRows(5);
+        TxtAreaObservaciones.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jScrollPane1.setViewportView(TxtAreaObservaciones);
 
         javax.swing.GroupLayout PnlInfMedicoLayout = new javax.swing.GroupLayout(PnlInfMedico);
@@ -152,7 +165,7 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
                 .addGroup(PnlInfMedicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(TxtTalla, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LblTalla))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                 .addGroup(PnlInfMedicoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(TxtPeso)
                     .addComponent(LblPeso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -163,6 +176,9 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
                 .addGap(17, 17, 17))
         );
 
+        PnlSecundario.setBackground(new java.awt.Color(241, 246, 190));
+
+        ChbDiagnostico.setBackground(new java.awt.Color(241, 246, 190));
         ChbDiagnostico.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         ChbDiagnostico.setText("Diagnostico");
         ChbDiagnostico.addActionListener(new java.awt.event.ActionListener() {
@@ -171,6 +187,7 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
             }
         });
 
+        ChbReceta.setBackground(new java.awt.Color(241, 246, 190));
         ChbReceta.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         ChbReceta.setText("Receta Medica");
         ChbReceta.addActionListener(new java.awt.event.ActionListener() {
@@ -179,10 +196,14 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
             }
         });
 
+        ChbSintoma.setBackground(new java.awt.Color(241, 246, 190));
         ChbSintoma.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
         ChbSintoma.setText("Sintomas");
 
+        BtnAñadirDiagnostico.setBackground(new java.awt.Color(93, 109, 126));
         BtnAñadirDiagnostico.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        BtnAñadirDiagnostico.setForeground(new java.awt.Color(255, 255, 255));
+        BtnAñadirDiagnostico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estilos/static/icon_add.png"))); // NOI18N
         BtnAñadirDiagnostico.setText("Añadir Diagnostico");
         BtnAñadirDiagnostico.setMargin(new java.awt.Insets(12, 14, 3, 14));
         BtnAñadirDiagnostico.setVerticalAlignment(javax.swing.SwingConstants.TOP);
@@ -197,32 +218,36 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
         PnlSecundarioLayout.setHorizontalGroup(
             PnlSecundarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlSecundarioLayout.createSequentialGroup()
-                .addGap(0, 63, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(PnlSecundarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BtnAñadirDiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(PnlSecundarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(ChbSintoma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(ChbReceta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ChbDiagnostico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(64, 64, 64))
+                        .addComponent(ChbDiagnostico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(BtnAñadirDiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29))
         );
         PnlSecundarioLayout.setVerticalGroup(
             PnlSecundarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlSecundarioLayout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(ChbDiagnostico)
-                .addGap(46, 46, 46)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ChbReceta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addGap(35, 35, 35)
                 .addComponent(ChbSintoma)
                 .addGap(40, 40, 40)
-                .addComponent(BtnAñadirDiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                .addComponent(BtnAñadirDiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26))
         );
 
+        PnlRegistrar.setBackground(new java.awt.Color(241, 246, 190));
         PnlRegistrar.setPreferredSize(new java.awt.Dimension(981, 80));
 
+        BtnRegistrar.setBackground(new java.awt.Color(25, 111, 61));
         BtnRegistrar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        BtnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
+        BtnRegistrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estilos/static/icon_assingment.png"))); // NOI18N
         BtnRegistrar.setText("Registrar");
         BtnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -234,17 +259,17 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
         PnlRegistrar.setLayout(PnlRegistrarLayout);
         PnlRegistrarLayout.setHorizontalGroup(
             PnlRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PnlRegistrarLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlRegistrarLayout.createSequentialGroup()
+                .addContainerGap(27, Short.MAX_VALUE)
                 .addComponent(BtnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 950, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(23, 23, 23))
         );
         PnlRegistrarLayout.setVerticalGroup(
             PnlRegistrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlRegistrarLayout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addGap(14, 14, 14)
                 .addComponent(BtnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -255,8 +280,7 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(PnlInfMedico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PnlSecundario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(PnlSecundario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(PnlRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -264,12 +288,12 @@ public class frmRegCtrlMedico extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(PnlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PnlSecundario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PnlInfMedico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(PnlSecundario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PnlInfMedico, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(PnlRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(PnlRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
 
         pack();

@@ -4,6 +4,8 @@
  */
 package vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author Nick Emanuel Salcedo Alfaro
@@ -15,6 +17,7 @@ public class frmRegSintomas extends javax.swing.JFrame {
      */
     public frmRegSintomas() {
         initComponents();
+        getContentPane().setBackground(new Color(114, 187, 83));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
@@ -42,7 +45,10 @@ public class frmRegSintomas extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        PnlTitulo.setBackground(new java.awt.Color(241, 246, 190));
+
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        LblTitulo.setForeground(new java.awt.Color(114, 187, 83));
         LblTitulo.setText("Registrar Sintomas");
 
         javax.swing.GroupLayout PnlTituloLayout = new javax.swing.GroupLayout(PnlTitulo);
@@ -62,22 +68,31 @@ public class frmRegSintomas extends javax.swing.JFrame {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
+        PnlSintoma.setBackground(new java.awt.Color(241, 246, 190));
+
         LblNuevoSintoma.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        LblNuevoSintoma.setForeground(new java.awt.Color(114, 187, 83));
         LblNuevoSintoma.setText("Nuevo Sintoma:");
 
         LblNombreSintoma.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         LblNombreSintoma.setText("Nombre del Sintoma:");
 
+        TxtNombreSintoma.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         TxtNombreSintoma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtNombreSintomaActionPerformed(evt);
             }
         });
 
+        TxtGravedad.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
         LblGravedad.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         LblGravedad.setText("Gravedad:");
 
+        BtnRegistrarSintoma.setBackground(new java.awt.Color(93, 109, 126));
         BtnRegistrarSintoma.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        BtnRegistrarSintoma.setForeground(new java.awt.Color(255, 255, 255));
+        BtnRegistrarSintoma.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estilos/static/icon_pill.png"))); // NOI18N
         BtnRegistrarSintoma.setText("Registrar Sintoma");
         BtnRegistrarSintoma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,6 +144,7 @@ public class frmRegSintomas extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        PnlTabla.setBackground(new java.awt.Color(241, 246, 190));
         PnlTabla.setPreferredSize(new java.awt.Dimension(700, 210));
 
         TblSintoma.setModel(new javax.swing.table.DefaultTableModel(
@@ -155,10 +171,10 @@ public class frmRegSintomas extends javax.swing.JFrame {
         );
         PnlTablaLayout.setVerticalGroup(
             PnlTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PnlTablaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlTablaLayout.createSequentialGroup()
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -176,8 +192,8 @@ public class frmRegSintomas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PnlSintoma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PnlTabla, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(PnlTabla, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
         pack();

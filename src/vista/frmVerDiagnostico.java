@@ -4,6 +4,8 @@
  */
 package vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author Nick Emanuel Salcedo Alfaro
@@ -15,6 +17,7 @@ public class frmVerDiagnostico extends javax.swing.JFrame {
      */
     public frmVerDiagnostico() {
         initComponents();
+        getContentPane().setBackground(new Color(114, 187, 83));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
@@ -56,9 +59,11 @@ public class frmVerDiagnostico extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        PnlTitulo.setBackground(new java.awt.Color(241, 246, 179));
         PnlTitulo.setPreferredSize(new java.awt.Dimension(1001, 100));
 
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        LblTitulo.setForeground(new java.awt.Color(114, 187, 83));
         LblTitulo.setText("Diagnostico");
 
         javax.swing.GroupLayout PnlTituloLayout = new javax.swing.GroupLayout(PnlTitulo);
@@ -68,7 +73,7 @@ public class frmVerDiagnostico extends javax.swing.JFrame {
             .addGroup(PnlTituloLayout.createSequentialGroup()
                 .addGap(333, 333, 333)
                 .addComponent(LblTitulo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(369, Short.MAX_VALUE))
         );
         PnlTituloLayout.setVerticalGroup(
             PnlTituloLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -78,7 +83,10 @@ public class frmVerDiagnostico extends javax.swing.JFrame {
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
+        PnlSintomas.setBackground(new java.awt.Color(241, 246, 179));
+
         LblSintomas.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        LblSintomas.setForeground(new java.awt.Color(114, 187, 83));
         LblSintomas.setText("Sintomas:");
 
         TblSintomas.setModel(new javax.swing.table.DefaultTableModel(
@@ -115,7 +123,10 @@ public class frmVerDiagnostico extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        PnlReceta.setBackground(new java.awt.Color(241, 246, 179));
+
         LblReceta.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        LblReceta.setForeground(new java.awt.Color(114, 187, 83));
         LblReceta.setText("Receta:");
 
         TblReceta.setModel(new javax.swing.table.DefaultTableModel(
@@ -153,6 +164,8 @@ public class frmVerDiagnostico extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        PnlDiagnostico.setBackground(new java.awt.Color(241, 246, 179));
+
         LblResultado.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         LblResultado.setText("Resultado:");
 
@@ -161,7 +174,10 @@ public class frmVerDiagnostico extends javax.swing.JFrame {
 
         TxtAreaDescripcion.setColumns(20);
         TxtAreaDescripcion.setRows(5);
+        TxtAreaDescripcion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jScrollPane1.setViewportView(TxtAreaDescripcion);
+
+        TxtResultado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         javax.swing.GroupLayout PnlDiagnosticoLayout = new javax.swing.GroupLayout(PnlDiagnostico);
         PnlDiagnostico.setLayout(PnlDiagnosticoLayout);
@@ -194,7 +210,10 @@ public class frmVerDiagnostico extends javax.swing.JFrame {
                 .addGap(72, 72, 72))
         );
 
+        PnlExamenFisico.setBackground(new java.awt.Color(241, 246, 179));
+
         LblExamenFisico.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        LblExamenFisico.setForeground(new java.awt.Color(114, 187, 83));
         LblExamenFisico.setText("Examen fisico:");
 
         LblEstado.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
@@ -208,6 +227,14 @@ public class frmVerDiagnostico extends javax.swing.JFrame {
 
         LblFrecuencia.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         LblFrecuencia.setText("Frecuencia cárdiaca:");
+
+        TxtEstado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        TxtFechaExamen.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        TxtTemperatura.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        TxtFrecuencia.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         javax.swing.GroupLayout PnlExamenFisicoLayout = new javax.swing.GroupLayout(PnlExamenFisico);
         PnlExamenFisico.setLayout(PnlExamenFisicoLayout);

@@ -4,6 +4,8 @@
  */
 package vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author Nick Emanuel Salcedo Alfaro
@@ -15,6 +17,7 @@ public class frmModCtrlOperaciones extends javax.swing.JFrame {
      */
     public frmModCtrlOperaciones() {
         initComponents();
+        getContentPane().setBackground(new Color(114, 187, 83));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
@@ -51,9 +54,11 @@ public class frmModCtrlOperaciones extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        PnlRegistrarControlOperacion.setBackground(new java.awt.Color(241, 246, 190));
         PnlRegistrarControlOperacion.setPreferredSize(new java.awt.Dimension(1000, 100));
 
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        LblTitulo.setForeground(new java.awt.Color(114, 187, 83));
         LblTitulo.setText("Modificar control de operacion");
 
         javax.swing.GroupLayout PnlRegistrarControlOperacionLayout = new javax.swing.GroupLayout(PnlRegistrarControlOperacion);
@@ -73,7 +78,10 @@ public class frmModCtrlOperaciones extends javax.swing.JFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
+        PnlInformeMedicoLeft.setBackground(new java.awt.Color(241, 246, 190));
+
         LblInformeMedico.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        LblInformeMedico.setForeground(new java.awt.Color(114, 187, 83));
         LblInformeMedico.setText("Informe medico:");
 
         LblNombreOperacion.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
@@ -87,7 +95,14 @@ public class frmModCtrlOperaciones extends javax.swing.JFrame {
 
         TxtAreaDescripcion.setColumns(20);
         TxtAreaDescripcion.setRows(5);
+        TxtAreaDescripcion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jScrollPane1.setViewportView(TxtAreaDescripcion);
+
+        TxtAnimal.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        TxtNombreOperacion.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        TxtResultado.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         LblAnimal.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         LblAnimal.setText("Animal:");
@@ -147,7 +162,12 @@ public class frmModCtrlOperaciones extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        PnlModificar.setBackground(new java.awt.Color(241, 246, 190));
+
+        BtnModificar.setBackground(new java.awt.Color(25, 111, 61));
         BtnModificar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        BtnModificar.setForeground(new java.awt.Color(255, 255, 255));
+        BtnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estilos/static/icon_assingment.png"))); // NOI18N
         BtnModificar.setText("Modificar");
         BtnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,11 +192,14 @@ public class frmModCtrlOperaciones extends javax.swing.JFrame {
                 .addGap(14, 14, 14))
         );
 
+        PnlInformeMedicoRight.setBackground(new java.awt.Color(241, 246, 190));
+
         LblFechaOperacion.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         LblFechaOperacion.setText("Fecha operación:");
 
         TxtAreaAnotaciones.setColumns(20);
         TxtAreaAnotaciones.setRows(5);
+        TxtAreaAnotaciones.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jScrollPane2.setViewportView(TxtAreaAnotaciones);
 
         LblAnotaciones1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N

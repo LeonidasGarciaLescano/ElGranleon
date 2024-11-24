@@ -1,5 +1,6 @@
 package controladorVetZoo;
 
+import estilos.Fuente;
 import general.Sistema;
 import general.Utilidades;
 import java.awt.Color;
@@ -22,7 +23,8 @@ public class ControladorRegRec {
     public ControladorRegRec(JCheckBox chbRec1, JCheckBox chbRec2) {
 
         vistaRegRec = new frmRegReceta();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaRegRec.getContentPane());
         Utilidades.llenarTablaMedicamentos(vistaRegRec.TblMedicamentos, Sistema.nuevoDiagnostico.getMedicamentos());
 
         vistaRegRec.BtnRegistrarMedicamento.addActionListener(new ActionListener() {

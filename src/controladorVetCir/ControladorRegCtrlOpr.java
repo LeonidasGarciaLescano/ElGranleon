@@ -1,5 +1,6 @@
 package controladorVetCir;
 
+import estilos.Fuente;
 import general.Sistema;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -23,7 +24,8 @@ public class ControladorRegCtrlOpr {
 
     public ControladorRegCtrlOpr(Animal animalSel) {
         vistaCtrlOpr = new frmRegCtrlOperacion();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaCtrlOpr.getContentPane());
         vistaCtrlOpr.TxtAnimal.setText(animalSel.getNombre());
 
         vistaCtrlOpr.BtnRegistrar.addActionListener(new ActionListener() {

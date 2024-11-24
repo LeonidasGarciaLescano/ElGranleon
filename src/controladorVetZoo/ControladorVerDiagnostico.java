@@ -1,5 +1,6 @@
 package controladorVetZoo;
 
+import estilos.Fuente;
 import general.Utilidades;
 import modeloDiagnostico.Diagnostico;
 import vista.frmVerDiagnostico;
@@ -13,7 +14,8 @@ public class ControladorVerDiagnostico {
 
     public ControladorVerDiagnostico(Diagnostico diagnostico) {
         vistaDiagnostico = new frmVerDiagnostico();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaDiagnostico.getContentPane());
         vistaDiagnostico.TxtAreaDescripcion.setText(diagnostico.getDescripcion());
         vistaDiagnostico.TxtResultado.setText(diagnostico.getResultado());
 

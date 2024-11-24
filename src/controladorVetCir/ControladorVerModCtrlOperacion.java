@@ -1,5 +1,6 @@
 package controladorVetCir;
 
+import estilos.Fuente;
 import general.Sistema;
 import general.Utilidades;
 import modeloControlOperacion.ControlOperacion;
@@ -15,7 +16,8 @@ public class ControladorVerModCtrlOperacion {
 
     public ControladorVerModCtrlOperacion() {
         vistaVerCtrlOpr = new frmVerCtrlOperaciones();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaVerCtrlOpr.getContentPane());
         Utilidades.llenarTablaVerCtrlOpr(vistaVerCtrlOpr.TblControlOperaciones);
 
         vistaVerCtrlOpr.TblControlOperaciones.addMouseListener(new java.awt.event.MouseAdapter() {

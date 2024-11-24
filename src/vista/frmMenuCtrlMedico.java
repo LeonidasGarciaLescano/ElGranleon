@@ -18,25 +18,10 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
      */
     public frmMenuCtrlMedico() {
         initComponents();
-        getContentPane().setBackground(new Color(204, 255, 204));
+        getContentPane().setBackground(new Color(241, 246, 190));
         this.setLocationRelativeTo(null);
         setResizable(false);
         setSize(1000, 620);
-        setDate();
-    }
-    private void setDate(){
-        LocalTime currentTime = LocalTime.now();
-        String saludo;
-
-        if (currentTime.isBefore(LocalTime.NOON)) {
-            saludo = "¡Buenos días veterinario medico encargado!";
-        } else if (currentTime.isBefore(LocalTime.of(18, 0))) {
-            saludo = "¡Buenas tardes veterinario medico encargado!";
-        } else {
-            saludo = "¡Buenas noches veterinario medico encargado!";
-        }
-
-        LblSaludo.setText(saludo);
     }
 
     /**
@@ -65,10 +50,11 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        PnlTitulo.setBackground(new Color(204, 255, 204));
+        PnlTitulo.setBackground(new Color(241, 246, 190));
         PnlTitulo.setLayout(new java.awt.GridBagLayout());
 
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        LblTitulo.setForeground(new java.awt.Color(114, 187, 83));
         LblTitulo.setText("Gestión de controles médicos");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -78,9 +64,10 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(23, 120, 21, 147);
         PnlTitulo.add(LblTitulo, gridBagConstraints);
 
-        PnlVerCtrlMedico.setBackground(new Color(204, 255, 204));
+        PnlVerCtrlMedico.setBackground(new Color(241, 246, 190));
 
         LblSaludo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        LblSaludo.setForeground(new java.awt.Color(114, 187, 83));
         LblSaludo.setText("¡Buenas (Tiempo), (Nombre del veterinario)!");
 
         javax.swing.GroupLayout PnlVerCtrlMedicoLayout = new javax.swing.GroupLayout(PnlVerCtrlMedico);
@@ -103,10 +90,13 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
         PnlInputs.setBackground(new Color(204, 255, 204));
         PnlInputs.setLayout(new java.awt.GridLayout(4, 1));
 
-        PnlGenCrtlMed.setBackground(new Color(204, 255, 204));
+        PnlGenCrtlMed.setBackground(new Color(241, 246, 190));
         PnlGenCrtlMed.setLayout(new java.awt.GridBagLayout());
 
+        BtnGenCtrlMed.setBackground(new java.awt.Color(26, 82, 118));
         BtnGenCtrlMed.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        BtnGenCtrlMed.setForeground(new java.awt.Color(255, 255, 255));
+        BtnGenCtrlMed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estilos/static/icon_create.png"))); // NOI18N
         BtnGenCtrlMed.setText("Generar control médico");
         BtnGenCtrlMed.setPreferredSize(new java.awt.Dimension(700, 80));
         BtnGenCtrlMed.addActionListener(new java.awt.event.ActionListener() {
@@ -118,20 +108,26 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
 
         PnlInputs.add(PnlGenCrtlMed);
 
-        PnlVerCtrlMed.setBackground(new Color(204, 255, 204));
+        PnlVerCtrlMed.setBackground(new Color(241, 246, 190));
         PnlVerCtrlMed.setLayout(new java.awt.GridBagLayout());
 
+        BtnVerCtrlMed.setBackground(new java.awt.Color(211, 84, 0));
         BtnVerCtrlMed.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        BtnVerCtrlMed.setForeground(new java.awt.Color(255, 255, 255));
+        BtnVerCtrlMed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estilos/static/icon_read.png"))); // NOI18N
         BtnVerCtrlMed.setText("Visualizar controles médicos");
         BtnVerCtrlMed.setPreferredSize(new java.awt.Dimension(700, 80));
         PnlVerCtrlMed.add(BtnVerCtrlMed, new java.awt.GridBagConstraints());
 
         PnlInputs.add(PnlVerCtrlMed);
 
-        PnlModCtrlMed.setBackground(new Color(204, 255, 204));
+        PnlModCtrlMed.setBackground(new Color(241, 246, 190));
         PnlModCtrlMed.setLayout(new java.awt.GridBagLayout());
 
+        BtnModCtrlMed.setBackground(new java.awt.Color(114, 187, 83));
         BtnModCtrlMed.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        BtnModCtrlMed.setForeground(new java.awt.Color(255, 255, 255));
+        BtnModCtrlMed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estilos/static/icon_mod.png"))); // NOI18N
         BtnModCtrlMed.setText("Modificar controles médicos");
         BtnModCtrlMed.setPreferredSize(new java.awt.Dimension(700, 80));
         BtnModCtrlMed.addActionListener(new java.awt.event.ActionListener() {
@@ -143,10 +139,13 @@ public class frmMenuCtrlMedico extends javax.swing.JFrame {
 
         PnlInputs.add(PnlModCtrlMed);
 
-        PnlDelCtrlMed.setBackground(new Color(204, 255, 204));
+        PnlDelCtrlMed.setBackground(new Color(241, 246, 190));
         PnlDelCtrlMed.setLayout(new java.awt.GridBagLayout());
 
+        BtnDelCtrlMed.setBackground(new java.awt.Color(211, 84, 0));
         BtnDelCtrlMed.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); // NOI18N
+        BtnDelCtrlMed.setForeground(new java.awt.Color(255, 255, 255));
+        BtnDelCtrlMed.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estilos/static/icon_delete.png"))); // NOI18N
         BtnDelCtrlMed.setText("Eliminar control médico");
         BtnDelCtrlMed.setPreferredSize(new java.awt.Dimension(700, 80));
         PnlDelCtrlMed.add(BtnDelCtrlMed, new java.awt.GridBagConstraints());

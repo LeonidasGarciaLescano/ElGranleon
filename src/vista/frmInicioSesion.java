@@ -17,7 +17,7 @@ public class frmInicioSesion extends javax.swing.JFrame {
      */
     public frmInicioSesion() {
         initComponents();
-        getContentPane().setBackground(new Color(204, 255, 204));
+        getContentPane().setBackground(new Color(241, 246, 190));
         this.setLocationRelativeTo(null);
         setResizable(false);
         setSize(1000, 620);
@@ -35,6 +35,7 @@ public class frmInicioSesion extends javax.swing.JFrame {
         PnlTitulo = new javax.swing.JPanel();
         LblTitutlo = new javax.swing.JLabel();
         PnlLogo = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         PnlInputs = new javax.swing.JPanel();
         PnlId = new javax.swing.JPanel();
         TxtId = new javax.swing.JTextField();
@@ -46,49 +47,55 @@ public class frmInicioSesion extends javax.swing.JFrame {
         BtnIngresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(102, 255, 102));
 
-        PnlTitulo.setBackground(new java.awt.Color(204, 255, 204));
+        PnlTitulo.setBackground(new java.awt.Color(241, 246, 190));
         PnlTitulo.setForeground(new java.awt.Color(60, 63, 65));
         PnlTitulo.setLayout(new java.awt.GridBagLayout());
 
-        LblTitutlo.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 48)); // NOI18N
+        LblTitutlo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        LblTitutlo.setForeground(new java.awt.Color(114, 187, 83));
         LblTitutlo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LblTitutlo.setText("Zoológico \"El Gran León\"");
         PnlTitulo.add(LblTitutlo, new java.awt.GridBagConstraints());
 
-        PnlLogo.setBackground(new java.awt.Color(204, 255, 204));
-        PnlLogo.setForeground(new java.awt.Color(204, 255, 204));
+        PnlLogo.setBackground(new java.awt.Color(241, 246, 190));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estilos/static/EGL_LOGO_ALTER_2 (3).png"))); // NOI18N
 
         javax.swing.GroupLayout PnlLogoLayout = new javax.swing.GroupLayout(PnlLogo);
         PnlLogo.setLayout(PnlLogoLayout);
         PnlLogoLayout.setHorizontalGroup(
             PnlLogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(PnlLogoLayout.createSequentialGroup()
+                .addGap(420, 420, 420)
+                .addComponent(jLabel3)
+                .addContainerGap(421, Short.MAX_VALUE))
         );
         PnlLogoLayout.setVerticalGroup(
             PnlLogoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 64, Short.MAX_VALUE)
+            .addComponent(jLabel3)
         );
 
         PnlInputs.setLayout(new java.awt.GridLayout(3, 1));
 
-        PnlId.setBackground(new Color(204,255,204));
+        PnlId.setBackground(new java.awt.Color(241, 246, 190));
         PnlId.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        TxtId.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         TxtId.setPreferredSize(new java.awt.Dimension(200, 35));
         PnlId.add(TxtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 50, 330, -1));
 
-        jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
         jLabel2.setText("Identificación del zoológico:");
         jLabel2.setPreferredSize(new java.awt.Dimension(200, 25));
-        PnlId.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, 330, -1));
+        PnlId.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, 330, 40));
 
-        PnlClave.setBackground(new Color(204,255,204));
+        PnlClave.setBackground(new java.awt.Color(241, 246, 190));
 
+        TxtClave.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         TxtClave.setPreferredSize(new java.awt.Dimension(200, 35));
 
-        jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
         jLabel1.setText("Contraseña:");
         jLabel1.setPreferredSize(new java.awt.Dimension(200, 25));
 
@@ -97,26 +104,28 @@ public class frmInicioSesion extends javax.swing.JFrame {
         PnlClaveLayout.setHorizontalGroup(
             PnlClaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlClaveLayout.createSequentialGroup()
-                .addGap(329, 329, 329)
-                .addGroup(PnlClaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TxtClave, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(340, 340, 340))
+                .addGap(330, 330, 330)
+                .addGroup(PnlClaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(TxtClave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PnlClaveLayout.setVerticalGroup(
             PnlClaveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PnlClaveLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(TxtClave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        PnlIngresar.setBackground(new Color(204,255,204));
+        PnlIngresar.setBackground(new java.awt.Color(241, 246, 190));
         PnlIngresar.setLayout(new java.awt.GridBagLayout());
 
-        BtnIngresar.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        BtnIngresar.setBackground(new java.awt.Color(25, 111, 61));
+        BtnIngresar.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        BtnIngresar.setForeground(new java.awt.Color(255, 255, 255));
         BtnIngresar.setText("Ingresar");
         BtnIngresar.setPreferredSize(new java.awt.Dimension(200, 50));
         BtnIngresar.addActionListener(new java.awt.event.ActionListener() {
@@ -132,31 +141,24 @@ public class frmInicioSesion extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(PnlTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(PnlInputs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(PnlLogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(PnlId, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PnlClave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PnlIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addComponent(PnlLogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PnlId, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PnlClave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(PnlIngresar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(PnlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PnlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PnlLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(PnlId, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(PnlClave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(PnlIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PnlId, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PnlClave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PnlIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
                 .addComponent(PnlInputs, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -215,5 +217,6 @@ public class frmInicioSesion extends javax.swing.JFrame {
     public javax.swing.JTextField TxtId;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

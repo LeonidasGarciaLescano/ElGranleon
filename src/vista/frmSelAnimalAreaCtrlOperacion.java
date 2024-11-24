@@ -4,6 +4,8 @@
  */
 package vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author Nick Emanuel Salcedo Alfaro
@@ -15,6 +17,7 @@ public class frmSelAnimalAreaCtrlOperacion extends javax.swing.JFrame {
      */
     public frmSelAnimalAreaCtrlOperacion() {
         initComponents();
+        getContentPane().setBackground(new Color(241, 246, 190));
     }
 
     /**
@@ -34,7 +37,10 @@ public class frmSelAnimalAreaCtrlOperacion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        PnlTitulo.setBackground(new java.awt.Color(241, 246, 179));
+
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        LblTitulo.setForeground(new java.awt.Color(114, 187, 83));
         LblTitulo.setText("Animales de (Area)");
 
         javax.swing.GroupLayout PnlTituloLayout = new javax.swing.GroupLayout(PnlTitulo);
@@ -53,6 +59,8 @@ public class frmSelAnimalAreaCtrlOperacion extends javax.swing.JFrame {
                 .addComponent(LblTitulo)
                 .addGap(18, 18, 18))
         );
+
+        PnlTabla.setBackground(new java.awt.Color(241, 246, 179));
 
         TblAnimalesArea.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -141,10 +149,10 @@ public class frmSelAnimalAreaCtrlOperacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel LblTitulo;
+    public javax.swing.JLabel LblTitulo;
     private javax.swing.JPanel PnlTabla;
     private javax.swing.JPanel PnlTitulo;
-    private javax.swing.JTable TblAnimalesArea;
+    public javax.swing.JTable TblAnimalesArea;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,5 +1,6 @@
 package controladorVetZoo;
 
+import estilos.Fuente;
 import general.Sistema;
 import general.Utilidades;
 import modeloControlMedico.ControlMedico;
@@ -15,7 +16,8 @@ public class ControladorVerModCtrlMedico {
 
     public ControladorVerModCtrlMedico() {
         vistaCtrlMedicos = new frmVerCtrlMedicos();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaCtrlMedicos.getContentPane());
         Utilidades.llenarTablaVerCtrlMed(vistaCtrlMedicos.TblControlMedicos);
 
         vistaCtrlMedicos.TblControlMedicos.addMouseListener(new java.awt.event.MouseAdapter() {

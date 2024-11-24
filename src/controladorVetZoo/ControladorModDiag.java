@@ -1,5 +1,6 @@
 package controladorVetZoo;
 
+import estilos.Fuente;
 import general.Sistema;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -20,7 +21,8 @@ public class ControladorModDiag {
 
     public ControladorModDiag(ControlMedico ctrlMedSel, JCheckBox chbDiag, JCheckBox chbSin, JCheckBox chbRec) {
         vistaModDiag = new frmModDiagnostico();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaModDiag.getContentPane());
         if (ctrlMedSel.getDiagnostico() != null) {
             vistaModDiag.TxtAreaDescripcion.setText(ctrlMedSel.getDiagnostico().getDescripcion());
             vistaModDiag.TxtResultado.setText(ctrlMedSel.getDiagnostico().getResultado());

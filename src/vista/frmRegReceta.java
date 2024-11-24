@@ -4,6 +4,8 @@
  */
 package vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author Nick Emanuel Salcedo Alfaro
@@ -15,6 +17,7 @@ public class frmRegReceta extends javax.swing.JFrame {
      */
     public frmRegReceta() {
         initComponents();
+        getContentPane().setBackground(new Color(114, 187, 83));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
@@ -47,9 +50,11 @@ public class frmRegReceta extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
+        PnlTitulo.setBackground(new java.awt.Color(241, 246, 190));
         PnlTitulo.setPreferredSize(new java.awt.Dimension(569, 100));
 
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        LblTitulo.setForeground(new java.awt.Color(114, 187, 83));
         LblTitulo.setText("Registrar Receta");
 
         javax.swing.GroupLayout PnlTituloLayout = new javax.swing.GroupLayout(PnlTitulo);
@@ -69,6 +74,7 @@ public class frmRegReceta extends javax.swing.JFrame {
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
+        PnlTabla.setBackground(new java.awt.Color(241, 246, 190));
         PnlTabla.setPreferredSize(new java.awt.Dimension(700, 210));
 
         TblMedicamentos.setModel(new javax.swing.table.DefaultTableModel(
@@ -88,19 +94,24 @@ public class frmRegReceta extends javax.swing.JFrame {
         PnlTabla.setLayout(PnlTablaLayout);
         PnlTablaLayout.setHorizontalGroup(
             PnlTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PnlTablaLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlTablaLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 666, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addGap(16, 16, 16))
         );
         PnlTablaLayout.setVerticalGroup(
             PnlTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlTablaLayout.createSequentialGroup()
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
         );
 
+        PnlNuevoMedicamento.setBackground(new java.awt.Color(241, 246, 190));
         PnlNuevoMedicamento.setPreferredSize(new java.awt.Dimension(700, 206));
 
         LblNuevoMedicamento.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 36)); // NOI18N
+        LblNuevoMedicamento.setForeground(new java.awt.Color(114, 187, 83));
         LblNuevoMedicamento.setText("Nuevo medicamento:");
 
         LblCantidad.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
@@ -115,8 +126,19 @@ public class frmRegReceta extends javax.swing.JFrame {
         LblDias.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
         LblDias.setText("Dias:");
 
+        TxtIntervaloHoras.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        TxtNombreFarmaco.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        BtnRegistrarMedicamento.setBackground(new java.awt.Color(93, 109, 126));
         BtnRegistrarMedicamento.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
+        BtnRegistrarMedicamento.setForeground(new java.awt.Color(255, 255, 255));
+        BtnRegistrarMedicamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/estilos/static/icon_pill.png"))); // NOI18N
         BtnRegistrarMedicamento.setText("Registrar medicamento");
+
+        TxtDias.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        TxtCantidad.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         javax.swing.GroupLayout PnlNuevoMedicamentoLayout = new javax.swing.GroupLayout(PnlNuevoMedicamento);
         PnlNuevoMedicamento.setLayout(PnlNuevoMedicamentoLayout);
@@ -127,12 +149,14 @@ public class frmRegReceta extends javax.swing.JFrame {
                 .addGroup(PnlNuevoMedicamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PnlNuevoMedicamentoLayout.createSequentialGroup()
                         .addGroup(PnlNuevoMedicamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(LblNombreFarmaco)
-                            .addComponent(TxtNombreFarmaco, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(PnlNuevoMedicamentoLayout.createSequentialGroup()
+                                .addComponent(LblNombreFarmaco)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(PnlNuevoMedicamentoLayout.createSequentialGroup()
                                 .addComponent(LblCantidad)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TxtCantidad)))
+                                .addComponent(TxtCantidad, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE))
+                            .addComponent(TxtNombreFarmaco))
                         .addGap(66, 66, 66)
                         .addGroup(PnlNuevoMedicamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(TxtIntervaloHoras, javax.swing.GroupLayout.PREFERRED_SIZE, 304, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -143,10 +167,10 @@ public class frmRegReceta extends javax.swing.JFrame {
                                 .addComponent(TxtDias))))
                     .addComponent(LblNuevoMedicamento))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlNuevoMedicamentoLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(PnlNuevoMedicamentoLayout.createSequentialGroup()
+                .addGap(163, 163, 163)
                 .addComponent(BtnRegistrarMedicamento)
-                .addGap(200, 200, 200))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PnlNuevoMedicamentoLayout.setVerticalGroup(
             PnlNuevoMedicamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -167,9 +191,9 @@ public class frmRegReceta extends javax.swing.JFrame {
                         .addComponent(LblCantidad)
                         .addComponent(TxtCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(TxtDias, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(BtnRegistrarMedicamento, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -186,9 +210,9 @@ public class frmRegReceta extends javax.swing.JFrame {
                 .addComponent(PnlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PnlNuevoMedicamento, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
-                .addComponent(PnlTabla, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PnlTabla, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                .addGap(0, 0, 0))
         );
 
         pack();

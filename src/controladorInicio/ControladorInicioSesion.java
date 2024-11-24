@@ -8,17 +8,17 @@ import modeloArea.Area;
 import modeloVeterinario.Veterinario;
 import modeloVeterinario.VeterinarioCirujano;
 import vista.frmInicioSesion;
-
+import estilos.Fuente;
 /**
  * @author Leonidas Garcia Lescano
  */
 public class ControladorInicioSesion {
-
     private frmInicioSesion vistaInicioSesion;
 
     public ControladorInicioSesion() {
         vistaInicioSesion = new frmInicioSesion();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaInicioSesion.getContentPane());
         vistaInicioSesion.BtnIngresar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -1,5 +1,6 @@
 package controladorVetCir;
 
+import estilos.Fuente;
 import general.Sistema;
 import general.Utilidades;
 import java.awt.Color;
@@ -20,7 +21,8 @@ public class ControladorModCtrlOpr {
 
     public ControladorModCtrlOpr(ControlOperacion ctrlOprSel, JTable tablaControlOperaciones) {
         vistaModCtrlOpr = new frmModCtrlOperaciones();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaModCtrlOpr.getContentPane());
         vistaModCtrlOpr.TxtAnimal.setText(ctrlOprSel.getNombreAnimal());
         vistaModCtrlOpr.TxtResultado.setText(ctrlOprSel.getResultado());
         vistaModCtrlOpr.TxtNombreOperacion.setText(ctrlOprSel.getNombreOperacion());

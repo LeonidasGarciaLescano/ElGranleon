@@ -4,6 +4,8 @@
  */
 package vista;
 
+import java.awt.Color;
+
 /**
  *
  * @author Nick Emanuel Salcedo Alfaro
@@ -15,6 +17,7 @@ public class frmSelAnimalAreaCtrlMedico extends javax.swing.JFrame {
      */
     public frmSelAnimalAreaCtrlMedico() {
         initComponents();
+        getContentPane().setBackground(new Color(241, 246, 190));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
@@ -35,7 +38,10 @@ public class frmSelAnimalAreaCtrlMedico extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        PnlTitulo.setBackground(new java.awt.Color(241, 246, 179));
+
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
+        LblTitulo.setForeground(new java.awt.Color(114, 187, 83));
         LblTitulo.setText("Animales de (Area)");
 
         javax.swing.GroupLayout PnlTituloLayout = new javax.swing.GroupLayout(PnlTitulo);
@@ -54,6 +60,8 @@ public class frmSelAnimalAreaCtrlMedico extends javax.swing.JFrame {
                 .addComponent(LblTitulo)
                 .addGap(19, 19, 19))
         );
+
+        PnlTabla.setBackground(new java.awt.Color(241, 246, 179));
 
         TblAnimalesArea.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

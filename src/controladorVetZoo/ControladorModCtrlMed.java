@@ -1,5 +1,6 @@
 package controladorVetZoo;
 
+import estilos.Fuente;
 import general.Sistema;
 import general.Utilidades;
 import java.awt.Color;
@@ -24,7 +25,8 @@ public class ControladorModCtrlMed {
 
     public ControladorModCtrlMed(ControlMedico ctrlMedicoSel, JTable tablaControlesMedicos) {
         vistaModCtrlMedicos = new frmModCtrlMedicos();
-
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.aplicarFuentesSelectivas(vistaModCtrlMedicos.getContentPane());
         vistaModCtrlMedicos.TxtAnimal.setText(ctrlMedicoSel.getNombreAnimal());
 
         vistaModCtrlMedicos.ChbReceta.setEnabled(false);
