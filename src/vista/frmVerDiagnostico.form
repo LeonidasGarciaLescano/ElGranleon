@@ -43,7 +43,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="PnlDiagnostico" min="-2" pref="235" max="-2" attributes="0"/>
-                  <Component id="PnlExamenFisico" pref="0" max="32767" attributes="0"/>
+                  <Component id="PnlExamenFisico" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -307,13 +307,13 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="LblDescripcion" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jScrollPane1" min="-2" pref="136" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="124" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="LblResultado" min="-2" max="-2" attributes="0"/>
                       <Component id="TxtResultado" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="LblResultado" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -420,23 +420,23 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="LblExamenFisico" min="-2" max="-2" attributes="0"/>
+                  <Component id="LblExamenFisico" min="-2" pref="43" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="LblEstado" min="-2" max="-2" attributes="0"/>
                       <Component id="TxtEstado" min="-2" pref="29" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="LblTemperatura" min="-2" max="-2" attributes="0"/>
                       <Component id="TxtTemperatura" min="-2" pref="29" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="LblFrecuencia" min="-2" max="-2" attributes="0"/>
                       <Component id="TxtFrecuencia" min="-2" pref="29" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="LblFechaExamen" min="-2" max="-2" attributes="0"/>
                       <Component id="TxtFechaExamen" min="-2" pref="29" max="-2" attributes="0"/>
