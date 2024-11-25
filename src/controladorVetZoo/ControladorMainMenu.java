@@ -20,10 +20,10 @@ import vista.frmMenuCtrlMedico;
 public class ControladorMainMenu {
 
     private frmMenuCtrlMedico vistaMenuCtrlMed;
-    
+
     public ControladorMainMenu() {
         vistaMenuCtrlMed = new frmMenuCtrlMedico();
-        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf", "/estilos/resources/Geologica.ttf", 48f);
         Fuente.aplicarFuentesSelectivas(vistaMenuCtrlMed.getContentPane());
         setSaludo(Sistema.veterinarioSesion.getNombres());
 
@@ -71,6 +71,7 @@ public class ControladorMainMenu {
             @Override
             public void windowClosing(WindowEvent e) {
                 SerializadoraGEN.serializarAreas(Sistema.areas);
+                SerializadoraGEN.serializarIdentificadores(Sistema.contId);
             }
         });
 

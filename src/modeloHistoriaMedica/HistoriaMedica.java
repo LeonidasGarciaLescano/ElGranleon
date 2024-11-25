@@ -8,7 +8,6 @@ import excepciones.ArregloVacio;
 import excepciones.ElementoNoEncontrado;
 import excepciones.IdDuplicado;
 import excepciones.LimiteAlcanzado;
-import general.Sistema;
 import java.io.Serializable;
 import java.util.Date;
 import modeloVeterinario.Veterinario;
@@ -18,7 +17,8 @@ import modeloVeterinario.Veterinario;
  */
 public class HistoriaMedica implements Serializable {
 
-    private int id;
+    public static int id = 1;
+    private int idHistoria;
     private String nombreAnimal;
     private Date fechaCreacion;
     ArregloControlMedico controlesMedicos;
@@ -26,11 +26,11 @@ public class HistoriaMedica implements Serializable {
 
     public HistoriaMedica(String nombreAnimal) {
         this.nombreAnimal = nombreAnimal;
-        this.id = Sistema.codigosHistorias;
-        Sistema.codigosHistorias++;
+        this.idHistoria = id;
         this.fechaCreacion = fechaCreacion;
         this.controlesMedicos = new ArregloControlMedico();
         this.controlesOperaciones = new ArregloControlOperacion();
+        id++;
     }
 
     public int registrarControlMedico(Veterinario veterinario, String nombreAnimal, Date fechaRegistro, Date fechaUltimaMod) {

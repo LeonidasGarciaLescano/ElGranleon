@@ -5,6 +5,7 @@ import excepciones.ElementoNoEncontrado;
 import excepciones.IdDuplicado;
 import excepciones.LimiteAlcanzado;
 import general.Eliminadores;
+import general.Sistema;
 import java.io.Serializable;
 import java.util.Date;
 import modeloDiagnostico.Diagnostico;

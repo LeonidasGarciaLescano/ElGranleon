@@ -9,6 +9,7 @@ import java.util.Date;
 import javax.swing.JOptionPane;
 import modeloAnimal.Animal;
 import modeloControlMedico.ControlMedico;
+import modeloControlOperacion.ControlOperacion;
 import modeloDiagnostico.Diagnostico;
 import modeloExamenFisico.ExamenFisico;
 import modeloMedicamento.Medicamento;
@@ -44,6 +45,8 @@ public class ControladorRegCtrlOpr {
                     Sistema.veterinarioSesion.registrarHistoriaMedica(animalSel.getHistoriaMedica());
 
                     JOptionPane.showMessageDialog(vistaCtrlOpr, "Control de operacion registrado correctamente");
+                    
+                    Sistema.contId.setIdCtrlOpr(ControlOperacion.id);
 
                     vistaCtrlOpr.dispose();
                 } else {

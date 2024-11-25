@@ -1,6 +1,7 @@
 package controladorVetZoo;
 
 import estilos.Fuente;
+import general.ContenerIdentificadores;
 import general.Sistema;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -27,9 +28,9 @@ public class ControladorRegCtrlMed {
 
     public ControladorRegCtrlMed(Animal animalSel) {
         vistaRegCtrlMed = new frmRegCtrlMedico();
-        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf", "/estilos/resources/Geologica.ttf", 48f);
         Fuente.aplicarFuentesSelectivas(vistaRegCtrlMed.getContentPane());
-        
+
         vistaRegCtrlMed.TxtAnimal.setText(animalSel.getNombre());
 
         vistaRegCtrlMed.BtnAñadirDiagnostico.addActionListener(new ActionListener() {
@@ -88,6 +89,8 @@ public class ControladorRegCtrlMed {
                     Sistema.veterinarioSesion.registrarHistoriaMedica(animalSel.getHistoriaMedica());
 
                     JOptionPane.showMessageDialog(vistaRegCtrlMed, "El control médico se ha registrado correctamente");
+                    
+                    Sistema.contId.setIdCtrlMedico(ControlMedico.id);
 
                     Sistema.nuevoDiagnostico = null;
                     Sistema.nuevoInformeMedico = null;

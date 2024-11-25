@@ -18,6 +18,7 @@ public class frmSelAnimalAreaCtrlOperacion extends javax.swing.JFrame {
     public frmSelAnimalAreaCtrlOperacion() {
         initComponents();
         getContentPane().setBackground(new Color(241, 246, 190));
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     /**

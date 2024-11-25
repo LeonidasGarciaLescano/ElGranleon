@@ -23,7 +23,6 @@ public class Sistema {
     public static Diagnostico nuevoDiagnostico;
     public static InformeMedico nuevoInformeMedico;
 
-    //A QUITAR EN UN FUTURO
-    public static int codigosHistorias = 1;
+    public static ContenerIdentificadores contId = new ContenerIdentificadores();
 
 }

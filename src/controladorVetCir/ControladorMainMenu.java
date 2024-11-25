@@ -70,6 +70,7 @@ public class ControladorMainMenu {
             @Override
             public void windowClosing(WindowEvent e) {
                 SerializadoraGEN.serializarAreas(Sistema.areas);
+                SerializadoraGEN.serializarIdentificadores(Sistema.contId);
             }
         });
         
