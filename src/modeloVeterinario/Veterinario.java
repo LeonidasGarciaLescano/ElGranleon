@@ -45,8 +45,9 @@ public class Veterinario implements Serializable {
 
         try {
             historiasMedicas.registrarHistoriaMedica(nuevaHistoriaMedica);
+            System.out.println("historia añadida");
         } catch (IdDuplicado | LimiteAlcanzado e) {
-
+            System.out.println("historia ya registrada");
         }
 
     }

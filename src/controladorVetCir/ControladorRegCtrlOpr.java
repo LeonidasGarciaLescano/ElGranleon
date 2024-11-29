@@ -8,12 +8,8 @@ import java.awt.event.ActionListener;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import modeloAnimal.Animal;
-import modeloControlMedico.ControlMedico;
 import modeloControlOperacion.ControlOperacion;
-import modeloDiagnostico.Diagnostico;
-import modeloExamenFisico.ExamenFisico;
-import modeloMedicamento.Medicamento;
-import modeloSintoma.Sintoma;
+
 import vista.frmRegCtrlOperacion;
 
 /**
@@ -25,7 +21,7 @@ public class ControladorRegCtrlOpr {
 
     public ControladorRegCtrlOpr(Animal animalSel) {
         vistaCtrlOpr = new frmRegCtrlOperacion();
-        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf", "/estilos/resources/Geologica.ttf", 48f);
         Fuente.aplicarFuentesSelectivas(vistaCtrlOpr.getContentPane());
         vistaCtrlOpr.TxtAnimal.setText(animalSel.getNombre());
 
@@ -38,14 +34,14 @@ public class ControladorRegCtrlOpr {
                     String resultado = vistaCtrlOpr.TxtResultado.getText().trim();
                     String descripcion = vistaCtrlOpr.TxtAreaDescripcion.getText().trim();
                     Date fechaOperacion = vistaCtrlOpr.DateChFechaOperacion.getDate();
-                    String anotaciones = vistaCtrlOpr.TxtAreaDescripcion.getText().trim();
+                    String anotaciones = vistaCtrlOpr.TxtAreaAnotaciones.getText().trim();
 
                     animalSel.getHistoriaMedica().registrarControlOperaciones(Sistema.veterinarioSesion, animalSel.getNombre(), resultado, nombreOpr, resultado, descripcion, anotaciones, nombreOpr, fechaOperacion);
 
                     Sistema.veterinarioSesion.registrarHistoriaMedica(animalSel.getHistoriaMedica());
 
                     JOptionPane.showMessageDialog(vistaCtrlOpr, "Control de operacion registrado correctamente");
-                    
+
                     Sistema.contId.setIdCtrlOpr(ControlOperacion.id);
 
                     vistaCtrlOpr.dispose();

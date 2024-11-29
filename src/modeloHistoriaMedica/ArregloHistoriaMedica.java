@@ -25,7 +25,7 @@ public class ArregloHistoriaMedica implements Serializable {
     public void registrarHistoriaMedica(HistoriaMedica nuevaHistoriaMedica) throws IdDuplicado, LimiteAlcanzado {
 
         for (int i = 0; i < this.indice; i++) {
-            if (nuevaHistoriaMedica.getId() == historiasMedicas[i].getId()) {
+            if (nuevaHistoriaMedica.getIdHistoria()== historiasMedicas[i].getIdHistoria()) {
                 throw new IdDuplicado();
             }
         }

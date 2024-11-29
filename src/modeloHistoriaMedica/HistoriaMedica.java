@@ -112,6 +112,10 @@ public class HistoriaMedica implements Serializable {
         return id;
     }
 
+    public int getIdHistoria() {
+        return idHistoria;
+    }
+
     public Date getFechaCreacion() {
         return fechaCreacion;
     }
