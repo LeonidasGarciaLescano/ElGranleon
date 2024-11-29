@@ -38,6 +38,8 @@ public class frmElimCtrlMedico extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        PnlTitulo.setBackground(new java.awt.Color(241, 246, 190));
+
         LblTitulo.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 48)); // NOI18N
         LblTitulo.setForeground(new java.awt.Color(114, 187, 83));
         LblTitulo.setText("Eliminar controles medicos");
@@ -58,6 +60,8 @@ public class frmElimCtrlMedico extends javax.swing.JFrame {
                 .addComponent(LblTitulo)
                 .addGap(17, 17, 17))
         );
+
+        PnlTabla.setBackground(new java.awt.Color(241, 246, 190));
 
         TblControlMedico.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
