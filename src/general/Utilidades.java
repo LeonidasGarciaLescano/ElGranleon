@@ -28,10 +28,14 @@ public class Utilidades {
 
         DefaultTableModel model = new DefaultTableModel(ArregloControlMedico.getColumnas(), 0);
 
+        System.out.println(Sistema.veterinarioSesion.getHistoriasMedicas().obtenerArreglo());
+
         if (Sistema.veterinarioSesion.getHistoriasMedicas().obtenerArreglo() != null) {
             for (HistoriaMedica hist : Sistema.veterinarioSesion.getHistoriasMedicas().obtenerArreglo()) {
-                for (ControlMedico ctrlMed : hist.getControlesMedicos().obtenerArreglo()) {
-                    model.addRow(ctrlMed.obtenerDatosTabla());
+                if (hist.getControlesMedicos().obtenerArreglo() != null) {
+                    for (ControlMedico ctrlMed : hist.getControlesMedicos().obtenerArreglo()) {
+                        model.addRow(ctrlMed.obtenerDatosTabla());
+                    }
                 }
             }
         }
@@ -40,19 +44,22 @@ public class Utilidades {
 
     }
 
-    public static void llenarTablaVerCtrlOpr(JTable tablaCtrlMed) {
+    public static void llenarTablaVerCtrlOpr(JTable tablaCtrlOpr) {
 
         DefaultTableModel model = new DefaultTableModel(ArregloControlOperacion.getColumnas(), 0);
 
         if (Sistema.veterinarioSesion.getHistoriasMedicas().obtenerArreglo() != null) {
             for (HistoriaMedica hist : Sistema.veterinarioSesion.getHistoriasMedicas().obtenerArreglo()) {
-                for (ControlOperacion ctrlOpr : hist.getControlesOperaciones().obtenerArreglo()) {
-                    model.addRow(ctrlOpr.obtenerDatosTabla());
+                if (hist.getControlesOperaciones().obtenerArreglo() != null) {
+                    for (ControlOperacion ctrlOpr : hist.getControlesOperaciones().obtenerArreglo()) {
+                        model.addRow(ctrlOpr.obtenerDatosTabla());
+                    }
                 }
+
             }
         }
 
-        tablaCtrlMed.setModel(model);
+        tablaCtrlOpr.setModel(model);
 
     }
 

@@ -104,6 +104,7 @@ public class HistoriaMedica implements Serializable {
         try {
             controlesOperaciones.eliminarControlOperacion(idCtrlOperacion);
         } catch (ArregloVacio | ElementoNoEncontrado e) {
+            System.out.println("xd");
         }
 
     }

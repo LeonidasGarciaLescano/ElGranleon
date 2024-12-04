@@ -51,6 +51,7 @@ public class ArregloControlOperacion implements Serializable {
 
         if (nuevoIndice != this.indice) {
             this.indice = nuevoIndice;
+            System.out.println("control eliminado");
         } else {
             throw new ElementoNoEncontrado();
         }

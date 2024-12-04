@@ -17,7 +17,7 @@ public class ControladorElimCtrlMedico {
 
     public ControladorElimCtrlMedico() {
         vistaElimCtrlMed = new frmElimCtrlMedico();
-        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf", "/estilos/resources/Geologica.ttf", 48f);
         Fuente.aplicarFuentesSelectivas(vistaElimCtrlMed.getContentPane());
         Utilidades.llenarTablaVerCtrlMed(vistaElimCtrlMed.TblControlMedico);
 
@@ -34,30 +34,43 @@ public class ControladorElimCtrlMedico {
                         Integer idCtrlMedico = Integer.valueOf(vistaElimCtrlMed.TblControlMedico.getValueAt(row, 0).toString());
 
                         for (HistoriaMedica hist : Sistema.veterinarioSesion.getHistoriasMedicas().obtenerArreglo()) {
-                            for (ControlMedico ctrlMed : hist.getControlesMedicos().obtenerArreglo()) {
-                                if (ctrlMed.getIdCtrlMedico() == idCtrlMedico) {
-                                    hist.eliminarControlMedico(idCtrlMedico);
 
-                                    if (hist.getControlesMedicos().obtenerArreglo() != null) {
-                                        boolean aunTieneCtrolMed = false;
+                            if (hist.getControlesMedicos().obtenerArreglo() != null) {
+                                boolean eliminado = false;
 
-                                        for (ControlMedico ctrlMedDe : hist.getControlesMedicos().obtenerArreglo()) {
-                                            if (ctrlMedDe.getVeterinario().getId().equals(Sistema.veterinarioSesion.getId())) {
-                                                aunTieneCtrolMed = true;
-                                                break;
+                                for (ControlMedico ctrlMed : hist.getControlesMedicos().obtenerArreglo()) {
+                                    if (ctrlMed.getIdCtrlMedico() == idCtrlMedico) {
+
+                                        hist.eliminarControlMedico(idCtrlMedico);
+
+                                        if (hist.getControlesMedicos().obtenerArreglo() != null) {
+                                            boolean aunTieneCtrolMed = false;
+
+                                            for (ControlMedico ctrlMedDe : hist.getControlesMedicos().obtenerArreglo()) {
+                                                if (ctrlMedDe.getVeterinario().getId().equals(Sistema.veterinarioSesion.getId())) {
+                                                    aunTieneCtrolMed = true;
+                                                    break;
+                                                }
                                             }
+
+                                            if (!aunTieneCtrolMed) {
+                                                Sistema.veterinarioSesion.eliminarHistoriaMedica(hist.getIdHistoria());
+                                            }
+                                        } else {
+                                            Sistema.veterinarioSesion.eliminarHistoriaMedica(hist.getIdHistoria());
                                         }
 
-                                        if (!aunTieneCtrolMed) {
-                                            Sistema.veterinarioSesion.eliminarHistoriaMedica(hist.getId());
-                                        }
-                                    } else {
-                                        Sistema.veterinarioSesion.eliminarHistoriaMedica(hist.getId());
+                                        eliminado = true;
+
+                                        break;
                                     }
 
-                                    break;
+                                    if (eliminado) {
+                                        break;
+                                    }
                                 }
                             }
+
                         }
 
                         Utilidades.llenarTablaVerCtrlMed(vistaElimCtrlMed.TblControlMedico);
