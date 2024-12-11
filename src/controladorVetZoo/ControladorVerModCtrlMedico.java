@@ -16,7 +16,7 @@ public class ControladorVerModCtrlMedico {
 
     public ControladorVerModCtrlMedico() {
         vistaCtrlMedicos = new frmVerCtrlMedicos();
-        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf", "/estilos/resources/Geologica.ttf", 48f);
         Fuente.aplicarFuentesSelectivas(vistaCtrlMedicos.getContentPane());
         Utilidades.llenarTablaVerCtrlMed(vistaCtrlMedicos.TblControlMedicos);
 
@@ -32,12 +32,16 @@ public class ControladorVerModCtrlMedico {
                     ControlMedico ctrlMedSel = null;
 
                     for (HistoriaMedica hist : Sistema.veterinarioSesion.getHistoriasMedicas().obtenerArreglo()) {
-                        for (ControlMedico ctrlMed : hist.getControlesMedicos().obtenerArreglo()) {
-                            if (ctrlMed.getIdCtrlMedico() == idCtrlMedico) {
-                                ctrlMedSel = ctrlMed;
-                                break;
+
+                        if (hist.getControlesMedicos().obtenerArreglo() != null) {
+                            for (ControlMedico ctrlMed : hist.getControlesMedicos().obtenerArreglo()) {
+                                if (ctrlMed.getIdCtrlMedico() == idCtrlMedico) {
+                                    ctrlMedSel = ctrlMed;
+                                    break;
+                                }
                             }
                         }
+
                     }
 
                     if (ctrlMedSel != null) {

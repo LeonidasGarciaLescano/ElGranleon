@@ -16,7 +16,7 @@ public class ControladorVerModCtrlOperacion {
 
     public ControladorVerModCtrlOperacion() {
         vistaVerCtrlOpr = new frmVerCtrlOperaciones();
-        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf","/estilos/resources/Geologica.ttf",48f);
+        Fuente.inicializarFuentes("/estilos/resources/Adlam.ttf", "/estilos/resources/Geologica.ttf", 48f);
         Fuente.aplicarFuentesSelectivas(vistaVerCtrlOpr.getContentPane());
         Utilidades.llenarTablaVerCtrlOpr(vistaVerCtrlOpr.TblControlOperaciones);
 
@@ -32,12 +32,16 @@ public class ControladorVerModCtrlOperacion {
                     ControlOperacion ctrlOprSel = null;
 
                     for (HistoriaMedica hist : Sistema.veterinarioSesion.getHistoriasMedicas().obtenerArreglo()) {
-                        for (ControlOperacion ctrlOpr : hist.getControlesOperaciones().obtenerArreglo()) {
-                            if (ctrlOpr.getIdCtrlOpr() == idCtrlOperacion) {
-                                ctrlOprSel = ctrlOpr;
-                                break;
+
+                        if (hist.getControlesOperaciones().obtenerArreglo() != null) {
+                            for (ControlOperacion ctrlOpr : hist.getControlesOperaciones().obtenerArreglo()) {
+                                if (ctrlOpr.getIdCtrlOpr() == idCtrlOperacion) {
+                                    ctrlOprSel = ctrlOpr;
+                                    break;
+                                }
                             }
                         }
+
                     }
 
                     if (ctrlOprSel != null) {
